@@ -115,7 +115,7 @@ export class DesktopMain extends Disposable {
 		// and before the workbench is created to prevent flickering.
 		// We also need to respect that zoom level can be configured per
 		// workspace, so we need the resolved configuration service.
-		// (fixes https://github.com/microsoft/vscode/issues/187982)
+		// (fixes https://github.com/opencec/CEC-IDE/issues/187982)
 		this.applyConfiguredWindowZoomLevel(services.configurationService);
 
 		// Create Workbench

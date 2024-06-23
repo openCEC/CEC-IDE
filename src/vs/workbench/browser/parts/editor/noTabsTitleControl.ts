@@ -103,7 +103,7 @@ export class NoTabsTitleControl extends TitleControl {
 
 	private onTitleAuxClick(e: MouseEvent): void {
 		if (e.button === 1 /* Middle Button */ && this.group.activeEditor) {
-			EventHelper.stop(e, true /* for https://github.com/microsoft/vscode/issues/56715 */);
+			EventHelper.stop(e, true /* for https://github.com/opencec/CEC-IDE/issues/56715 */);
 
 			if (!preventEditorClose(this.group, this.group.activeEditor, EditorCloseMethod.MOUSE, this.accessor.partOptions)) {
 				this.group.closeEditor(this.group.activeEditor);
@@ -116,7 +116,7 @@ export class NoTabsTitleControl extends TitleControl {
 		// We only want to open the quick access picker when
 		// the tap occurred over the editor label, so we need
 		// to check on the target
-		// (https://github.com/microsoft/vscode/issues/107543)
+		// (https://github.com/opencec/CEC-IDE/issues/107543)
 		const target = e.initialTarget;
 		if (!(target instanceof HTMLElement) || !this.editorLabel || !isAncestor(target, this.editorLabel.element)) {
 			return;

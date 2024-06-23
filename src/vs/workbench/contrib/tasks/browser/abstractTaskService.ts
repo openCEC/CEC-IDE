@@ -1546,7 +1546,7 @@ export abstract class AbstractTaskService extends Disposable implements ITaskSer
 			};
 			let content = [
 				'{',
-				nls.localize('tasksJsonComment', '\t// See https://go.microsoft.com/fwlink/?LinkId=733558 \n\t// for the documentation about the tasks.json format'),
+				nls.localize('tasksJsonComment', '\t// See https://go.cec.com.cn/fwlink/?LinkId=733558 \n\t// for the documentation about the tasks.json format'),
 			].join('\n') + JSON.stringify(value, null, '\t').substr(1);
 			const editorConfig = this._configurationService.getValue<any>();
 			if (editorConfig.editor.insertSpaces) {

@@ -35,7 +35,7 @@ export function createJupyterCellFromNotebookCell(
 /**
  * Sort the JSON to minimize unnecessary SCM changes.
  * Jupyter notbeooks/labs sorts the JSON keys in alphabetical order.
- * https://github.com/microsoft/vscode-python/issues/13155
+ * https://github.com/opencec/CEC-IDE-python/issues/13155
  */
 export function sortObjectPropertiesRecursively(obj: any): any {
 	if (Array.isArray(obj)) {

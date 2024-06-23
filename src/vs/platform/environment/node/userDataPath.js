@@ -33,7 +33,7 @@
 			// current working directory. We cannot use the
 			// node.js `path.resolve()` logic because it will
 			// not pick up our `VSCODE_CWD` environment variable
-			// (https://github.com/microsoft/vscode/issues/120269)
+			// (https://github.com/opencec/CEC-IDE/issues/120269)
 			if (!path.isAbsolute(userDataPath)) {
 				pathsToResolve.unshift(cwd);
 			}

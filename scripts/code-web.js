@@ -130,7 +130,7 @@ async function downloadPlaygroundFile(fileName, httpsLocation, destinationRoot) 
 
 async function ensureWebDevExtensions(verbose) {
 
-	// Playground (https://github.com/microsoft/vscode-web-playground)
+	// Playground (https://github.com/opencec/CEC-IDE-web-playground)
 	const webDevPlaygroundRoot = path.join(WEB_DEV_EXTENSIONS_ROOT, 'vscode-web-playground');
 	const webDevPlaygroundExists = await directoryExists(webDevPlaygroundRoot);
 
@@ -152,7 +152,7 @@ async function ensureWebDevExtensions(verbose) {
 		if (verbose) {
 			fancyLog(`${ansiColors.magenta('Web Development extensions')}: Downloading vscode-web-playground to ${webDevPlaygroundRoot}`);
 		}
-		const playgroundRepo = `https://raw.githubusercontent.com/microsoft/vscode-web-playground/main/`;
+		const playgroundRepo = `https://raw.githubusercontent.com/opencec/CEC-IDE-web-playground/main/`;
 		await Promise.all(['package.json', 'dist/extension.js', 'dist/extension.js.map'].map(
 			fileName => downloadPlaygroundFile(fileName, playgroundRepo, webDevPlaygroundRoot)
 		));

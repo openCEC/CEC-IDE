@@ -5,6 +5,6 @@
 
 // empty placeholder for comment peek context menus
 
-// https://github.com/microsoft/vscode/issues/151533 @alexr00
+// https://github.com/opencec/CEC-IDE/issues/151533 @alexr00
 
 

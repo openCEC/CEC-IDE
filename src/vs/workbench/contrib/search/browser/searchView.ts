@@ -1505,7 +1505,7 @@ export class SearchView extends ViewPane {
 
 		// Need the full match line to correctly calculate replace text, if this is a search/replace with regex group references ($1, $2, ...).
 		// 10000 chars is enough to avoid sending huge amounts of text around, if you do a replace with a longer match, it may or may not resolve the group refs correctly.
-		// https://github.com/microsoft/vscode/issues/58374
+		// https://github.com/opencec/CEC-IDE/issues/58374
 		const charsPerLine = content.isRegExp ? 10000 : 1000;
 
 		const options: ITextQueryBuilderOptions = {
@@ -1760,7 +1760,7 @@ export class SearchView extends ViewPane {
 	}
 
 	private onLearnMore(): void {
-		this.openerService.open(URI.parse('https://go.microsoft.com/fwlink/?linkid=853977'));
+		this.openerService.open(URI.parse('https://go.cec.com.cn/fwlink/?linkid=853977'));
 	}
 
 	private onSearchAgain(): void {

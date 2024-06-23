@@ -27,7 +27,7 @@ export class NativeElevatedFileService implements IElevatedFileService {
 		// Saving elevated is currently only supported for local
 		// files for as long as we have no generic support from
 		// the file service
-		// (https://github.com/microsoft/vscode/issues/48659)
+		// (https://github.com/opencec/CEC-IDE/issues/48659)
 		return resource.scheme === Schemas.file;
 	}
 

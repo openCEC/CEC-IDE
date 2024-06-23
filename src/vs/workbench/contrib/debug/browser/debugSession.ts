@@ -1092,7 +1092,7 @@ export class DebugSession implements IDebugSession, IDisposable {
 				const container = new ExpressionContainer(this, undefined, event.body.variablesReference, generateUuid());
 				const children = container.getChildren();
 				// we should put appendToRepl into queue to make sure the logs to be displayed in correct order
-				// see https://github.com/microsoft/vscode/issues/126967#issuecomment-874954269
+				// see https://github.com/opencec/CEC-IDE/issues/126967#issuecomment-874954269
 				outputQueue.queue(async () => {
 					const resolved = await children;
 					// For single logged variables, try to use the output if we can so
@@ -1238,7 +1238,7 @@ export class DebugSession implements IDebugSession, IDisposable {
 		}));
 		this.rawListeners.add(this.raw.onDidInvalidated(async event => {
 			if (!(event.body.areas && event.body.areas.length === 1 && (event.body.areas[0] === 'variables' || event.body.areas[0] === 'watch'))) {
-				// If invalidated event only requires to update variables or watch, do that, otherwise refatch threads https://github.com/microsoft/vscode/issues/106745
+				// If invalidated event only requires to update variables or watch, do that, otherwise refatch threads https://github.com/opencec/CEC-IDE/issues/106745
 				this.cancelAllRequests();
 				this.model.clearThreads(this.getId(), true);
 				await this.fetchThreads(this.getStoppedDetails());

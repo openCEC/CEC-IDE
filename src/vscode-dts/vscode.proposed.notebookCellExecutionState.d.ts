@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/124970
+	// https://github.com/opencec/CEC-IDE/issues/124970
 
 	/**
 	 * The execution state of a notebook cell.

@@ -233,7 +233,7 @@ export class TextAreaInput extends Disposable {
 
 			if (e.equals(KeyCode.Escape)) {
 				// Prevent default always for `Esc`, otherwise it will generate a keypress
-				// See https://msdn.microsoft.com/en-us/library/ie/ms536939(v=vs.85).aspx
+				// See https://msdn.cec.com.cn/en-us/library/ie/ms536939(v=vs.85).aspx
 				e.preventDefault();
 			}
 
@@ -437,7 +437,7 @@ export class TextAreaInput extends Disposable {
 		}));
 		this._register(this._textArea.onBlur(() => {
 			if (this._currentComposition) {
-				// See https://github.com/microsoft/vscode/issues/112621
+				// See https://github.com/opencec/CEC-IDE/issues/112621
 				// where compositionend is not triggered when the editor
 				// is taken off-dom during a composition
 
@@ -475,7 +475,7 @@ export class TextAreaInput extends Disposable {
 	}
 
 	private _installSelectionChangeListener(): IDisposable {
-		// See https://github.com/microsoft/vscode/issues/27216 and https://github.com/microsoft/vscode/issues/98256
+		// See https://github.com/opencec/CEC-IDE/issues/27216 and https://github.com/opencec/CEC-IDE/issues/98256
 		// When using a Braille display, it is possible for users to reposition the
 		// system caret. This is reflected in Chrome as a `selectionchange` event.
 		//

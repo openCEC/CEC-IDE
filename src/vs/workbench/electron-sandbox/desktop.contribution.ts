@@ -45,7 +45,7 @@ import { applicationConfigurationNodeBase } from 'vs/workbench/common/configurat
 		// macOS: behave like other native apps that have documents
 		// but can run without a document opened and allow to close
 		// the window when the last document is closed
-		// (https://github.com/microsoft/vscode/issues/126042)
+		// (https://github.com/opencec/CEC-IDE/issues/126042)
 		KeybindingsRegistry.registerKeybindingRule({
 			id: CloseWindowAction.ID,
 			weight: KeybindingWeight.WorkbenchContrib,
@@ -139,7 +139,7 @@ import { applicationConfigurationNodeBase } from 'vs/workbench/common/configurat
 				'maximum': 120,
 				'included': !isWindows,
 				'scope': ConfigurationScope.APPLICATION,
-				'markdownDescription': localize('application.shellEnvironmentResolutionTimeout', "Controls the timeout in seconds before giving up resolving the shell environment when the application is not already launched from a terminal. See our [documentation](https://go.microsoft.com/fwlink/?linkid=2149667) for more information.")
+				'markdownDescription': localize('application.shellEnvironmentResolutionTimeout', "Controls the timeout in seconds before giving up resolving the shell environment when the application is not already launched from a terminal. See our [documentation](https://go.cec.com.cn/fwlink/?linkid=2149667) for more information.")
 			}
 		}
 	});

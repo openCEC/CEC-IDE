@@ -123,8 +123,8 @@ suite('OpenerService', function () {
 
 		openerService.registerValidator({ shouldOpen: () => Promise.resolve(false) });
 
-		const httpResult = await openerService.open(URI.parse('https://www.microsoft.com'));
-		const httpsResult = await openerService.open(URI.parse('https://www.microsoft.com'));
+		const httpResult = await openerService.open(URI.parse('https://www.cec.com.cn'));
+		const httpsResult = await openerService.open(URI.parse('https://www.cec.com.cn'));
 		assert.strictEqual(httpResult, false);
 		assert.strictEqual(httpsResult, false);
 	});
@@ -142,9 +142,9 @@ suite('OpenerService', function () {
 			}
 		});
 
-		await openerService.open(URI.parse('http://microsoft.com'));
+		await openerService.open(URI.parse('http://cec.com.cn'));
 		assert.strictEqual(openCount, 1);
-		await openerService.open(URI.parse('https://microsoft.com'));
+		await openerService.open(URI.parse('https://cec.com.cn'));
 		assert.strictEqual(openCount, 2);
 	});
 
@@ -158,8 +158,8 @@ suite('OpenerService', function () {
 				return Promise.resolve(false);
 			}
 		});
-		await openerService.open('https://wwww.microsoft.com');
-		await openerService.open('https://www.microsoft.com??params=CountryCode%3DUSA%26Name%3Dvscode"');
+		await openerService.open('https://wwww.cec.com.cn');
+		await openerService.open('https://www.cec.com.cn??params=CountryCode%3DUSA%26Name%3Dvscode"');
 	});
 
 	test('links validated by multiple validators', async function () {
@@ -189,11 +189,11 @@ suite('OpenerService', function () {
 			}
 		});
 
-		await openerService.open(URI.parse('http://microsoft.com'));
+		await openerService.open(URI.parse('http://cec.com.cn'));
 		assert.strictEqual(openCount, 1);
 		assert.strictEqual(v1, 1);
 		assert.strictEqual(v2, 1);
-		await openerService.open(URI.parse('https://microsoft.com'));
+		await openerService.open(URI.parse('https://cec.com.cn'));
 		assert.strictEqual(openCount, 2);
 		assert.strictEqual(v1, 2);
 		assert.strictEqual(v2, 2);
@@ -226,34 +226,34 @@ suite('OpenerService', function () {
 			}
 		});
 
-		await openerService.open(URI.parse('http://microsoft.com'));
+		await openerService.open(URI.parse('http://cec.com.cn'));
 		assert.strictEqual(openCount, 0);
 		assert.strictEqual(v1, 1);
 		assert.strictEqual(v2, 0);
-		await openerService.open(URI.parse('https://microsoft.com'));
+		await openerService.open(URI.parse('https://cec.com.cn'));
 		assert.strictEqual(openCount, 0);
 		assert.strictEqual(v1, 2);
 		assert.strictEqual(v2, 0);
 	});
 
 	test('matchesScheme', function () {
-		assert.ok(matchesScheme('https://microsoft.com', 'https'));
-		assert.ok(matchesScheme('http://microsoft.com', 'http'));
-		assert.ok(matchesScheme('hTTPs://microsoft.com', 'https'));
-		assert.ok(matchesScheme('httP://microsoft.com', 'http'));
-		assert.ok(matchesScheme(URI.parse('https://microsoft.com'), 'https'));
-		assert.ok(matchesScheme(URI.parse('http://microsoft.com'), 'http'));
-		assert.ok(matchesScheme(URI.parse('hTTPs://microsoft.com'), 'https'));
-		assert.ok(matchesScheme(URI.parse('httP://microsoft.com'), 'http'));
-		assert.ok(!matchesScheme(URI.parse('https://microsoft.com'), 'http'));
-		assert.ok(!matchesScheme(URI.parse('htt://microsoft.com'), 'http'));
-		assert.ok(!matchesScheme(URI.parse('z://microsoft.com'), 'http'));
+		assert.ok(matchesScheme('https://cec.com.cn', 'https'));
+		assert.ok(matchesScheme('http://cec.com.cn', 'http'));
+		assert.ok(matchesScheme('hTTPs://cec.com.cn', 'https'));
+		assert.ok(matchesScheme('httP://cec.com.cn', 'http'));
+		assert.ok(matchesScheme(URI.parse('https://cec.com.cn'), 'https'));
+		assert.ok(matchesScheme(URI.parse('http://cec.com.cn'), 'http'));
+		assert.ok(matchesScheme(URI.parse('hTTPs://cec.com.cn'), 'https'));
+		assert.ok(matchesScheme(URI.parse('httP://cec.com.cn'), 'http'));
+		assert.ok(!matchesScheme(URI.parse('https://cec.com.cn'), 'http'));
+		assert.ok(!matchesScheme(URI.parse('htt://cec.com.cn'), 'http'));
+		assert.ok(!matchesScheme(URI.parse('z://cec.com.cn'), 'http'));
 	});
 
 	test('matchesSomeScheme', function () {
-		assert.ok(matchesSomeScheme('https://microsoft.com', 'http', 'https'));
-		assert.ok(matchesSomeScheme('http://microsoft.com', 'http', 'https'));
-		assert.ok(!matchesSomeScheme('x://microsoft.com', 'http', 'https'));
+		assert.ok(matchesSomeScheme('https://cec.com.cn', 'http', 'https'));
+		assert.ok(matchesSomeScheme('http://cec.com.cn', 'http', 'https'));
+		assert.ok(!matchesSomeScheme('x://cec.com.cn', 'http', 'https'));
 	});
 
 	test('resolveExternalUri', async function () {

@@ -67,7 +67,7 @@ suite('Filters', () => {
 		filterNotOk(matchesPrefix, 'x', 'alpha');
 		filterOk(matchesPrefix, 'A', 'alpha', [{ start: 0, end: 1 }]);
 		filterOk(matchesPrefix, 'AlPh', 'alPHA', [{ start: 0, end: 4 }]);
-		filterNotOk(matchesPrefix, 'T', '4'); // see https://github.com/microsoft/vscode/issues/22401
+		filterNotOk(matchesPrefix, 'T', '4'); // see https://github.com/opencec/CEC-IDE/issues/22401
 	});
 
 	test('CamelCaseFilter', () => {
@@ -349,7 +349,7 @@ suite('Filters', () => {
 		);
 	});
 
-	test('Freeze when fjfj -> jfjf, https://github.com/microsoft/vscode/issues/91807', function () {
+	test('Freeze when fjfj -> jfjf, https://github.com/opencec/CEC-IDE/issues/91807', function () {
 		assertMatches(
 			'jfjfj',
 			'fjfjfjfjfjfjfjfjfjfjfj',

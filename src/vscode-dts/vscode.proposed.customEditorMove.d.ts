@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/86146
+	// https://github.com/opencec/CEC-IDE/issues/86146
 
 	// TODO: Also for custom editor
 

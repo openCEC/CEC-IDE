@@ -183,12 +183,12 @@ function normalizeURL(url: string | URI): string {
 }
 
 /**
- * Check whether a domain like https://www.microsoft.com matches
+ * Check whether a domain like https://www.cec.com.cn matches
  * the list of trusted domains.
  *
  * - Schemes must match
- * - There's no subdomain matching. For example https://microsoft.com doesn't match https://www.microsoft.com
- * - Star matches all subdomains. For example https://*.microsoft.com matches https://www.microsoft.com and https://foo.bar.microsoft.com
+ * - There's no subdomain matching. For example https://cec.com.cn doesn't match https://www.cec.com.cn
+ * - Star matches all subdomains. For example https://*.cec.com.cn matches https://www.cec.com.cn and https://foo.bar.cec.com.cn
  */
 export function isURLDomainTrusted(url: URI, trustedDomains: string[]) {
 	url = URI.parse(normalizeURL(url));

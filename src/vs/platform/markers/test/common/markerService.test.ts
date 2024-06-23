@@ -173,7 +173,7 @@ suite('Marker Service', () => {
 		assert.strictEqual(service.read({ owner: 'far' }).length, 1);
 	});
 
-	test('MapMap#remove returns bad values, https://github.com/microsoft/vscode/issues/13548', () => {
+	test('MapMap#remove returns bad values, https://github.com/opencec/CEC-IDE/issues/13548', () => {
 		const service = new markerService.MarkerService();
 
 		service.changeOne('o', URI.parse('some:uri/1'), [randomMarkerData()]);

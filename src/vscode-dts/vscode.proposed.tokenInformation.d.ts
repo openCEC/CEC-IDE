@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/91555
+	// https://github.com/opencec/CEC-IDE/issues/91555
 
 	export enum StandardTokenType {
 		Other = 0,

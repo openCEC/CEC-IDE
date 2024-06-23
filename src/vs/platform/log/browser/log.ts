@@ -80,7 +80,7 @@ export class ConsoleLogInAutomationLogger extends AdapterLogger implements ILogg
 			try {
 				automatedWindow.codeAutomationLog(type, args);
 			} catch (err) {
-				// see https://github.com/microsoft/vscode-test-web/issues/69
+				// see https://github.com/opencec/CEC-IDE-test-web/issues/69
 				console.error('Problems writing to codeAutomationLog', err);
 			}
 		}

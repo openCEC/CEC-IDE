@@ -26,14 +26,14 @@ const TRUSTED_DOMAINS_STAT: IStat = {
 
 const CONFIG_HELP_TEXT_PRE = `// Links matching one or more entries in the list below can be opened without link protection.
 // The following examples show what entries can look like:
-// - "https://microsoft.com": Matches this specific domain using https
-// - "https://microsoft.com:8080": Matches this specific domain on this port using https
-// - "https://microsoft.com:*": Matches this specific domain on any port using https
-// - "https://microsoft.com/foo": Matches https://microsoft.com/foo and https://microsoft.com/foo/bar,
-//   but not https://microsoft.com/foobar or https://microsoft.com/bar
-// - "https://*.microsoft.com": Match all domains ending in "microsoft.com" using https
-// - "microsoft.com": Match this specific domain using either http or https
-// - "*.microsoft.com": Match all domains ending in "microsoft.com" using either http or https
+// - "https://cec.com.cn": Matches this specific domain using https
+// - "https://cec.com.cn:8080": Matches this specific domain on this port using https
+// - "https://cec.com.cn:*": Matches this specific domain on any port using https
+// - "https://cec.com.cn/foo": Matches https://cec.com.cn/foo and https://cec.com.cn/foo/bar,
+//   but not https://cec.com.cn/foobar or https://cec.com.cn/bar
+// - "https://*.cec.com.cn": Match all domains ending in "cec.com.cn" using https
+// - "cec.com.cn": Match this specific domain using either http or https
+// - "*.cec.com.cn": Match all domains ending in "cec.com.cn" using either http or https
 // - "http://192.168.0.1: Matches this specific IP using http
 // - "http://192.168.0.*: Matches all IP's with this prefix using http
 // - "*": Match all domains using either http or https
@@ -46,7 +46,7 @@ const CONFIG_HELP_TEXT_AFTER = `//
 `;
 
 const CONFIG_PLACEHOLDER_TEXT = `[
-	// "https://microsoft.com"
+	// "https://cec.com.cn"
 ]`;
 
 function computeTrustedDomainContent(defaultTrustedDomains: string[], trustedDomains: string[], userTrustedDomains: string[], workspaceTrustedDomains: string[], configuring?: string) {

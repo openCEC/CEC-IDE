@@ -636,7 +636,7 @@ export abstract class AbstractExtensionService extends Disposable implements IEx
 			}
 		}
 
-		// See https://github.com/microsoft/vscode/issues/152204
+		// See https://github.com/opencec/CEC-IDE/issues/152204
 		// Dispose extension hosts in reverse creation order because the local extension host
 		// might be critical in sustaining a connection to the remote extension host
 		for (let i = this._extensionHostManagers.length - 1; i >= 0; i--) {

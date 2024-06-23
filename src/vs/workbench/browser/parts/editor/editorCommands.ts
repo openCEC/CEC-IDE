@@ -511,7 +511,7 @@ function registerOpenEditorAPICommands(): void {
 	}
 
 	// partial, renderer-side API command to open editor
-	// complements https://github.com/microsoft/vscode/blob/2b164efb0e6a5de3826bff62683eaeafe032284f/src/vs/workbench/api/common/extHostApiCommands.ts#L373
+	// complements https://github.com/opencec/CEC-IDE/blob/2b164efb0e6a5de3826bff62683eaeafe032284f/src/vs/workbench/api/common/extHostApiCommands.ts#L373
 	CommandsRegistry.registerCommand({
 		id: 'vscode.open',
 		handler: (accessor, arg) => {
@@ -569,7 +569,7 @@ function registerOpenEditorAPICommands(): void {
 	});
 
 	// partial, renderer-side API command to open diff editor
-	// complements https://github.com/microsoft/vscode/blob/2b164efb0e6a5de3826bff62683eaeafe032284f/src/vs/workbench/api/common/extHostApiCommands.ts#L397
+	// complements https://github.com/opencec/CEC-IDE/blob/2b164efb0e6a5de3826bff62683eaeafe032284f/src/vs/workbench/api/common/extHostApiCommands.ts#L397
 	CommandsRegistry.registerCommand({
 		id: 'vscode.diff',
 		handler: (accessor, left, right, label) => {

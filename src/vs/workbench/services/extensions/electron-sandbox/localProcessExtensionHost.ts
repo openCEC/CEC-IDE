@@ -248,7 +248,7 @@ export class NativeLocalProcessExtensionHost implements IExtensionHost {
 			opts.execArgv.unshift('--prof');
 		}
 
-		// Refs https://github.com/microsoft/vscode/issues/189805
+		// Refs https://github.com/opencec/CEC-IDE/issues/189805
 		opts.execArgv.unshift('--dns-result-order=ipv4first');
 
 		// Catch all output coming from the extension host process

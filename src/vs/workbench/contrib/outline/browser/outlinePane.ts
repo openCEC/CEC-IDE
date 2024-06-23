@@ -198,7 +198,7 @@ export class OutlinePane extends ViewPane implements IOutlinePane {
 		this._editorPaneDisposables.clear();
 
 		if (pane) {
-			// react to control changes from within pane (https://github.com/microsoft/vscode/issues/134008)
+			// react to control changes from within pane (https://github.com/opencec/CEC-IDE/issues/134008)
 			this._editorPaneDisposables.add(pane.onDidChangeControl(() => {
 				this._handleEditorControlChanged(pane);
 			}));

@@ -679,7 +679,7 @@ export function massageMessageBoxOptions(options: MessageBoxOptions, productServ
 			}
 		} else if (isWindows) {
 
-			// Windows: the HIG (https://learn.microsoft.com/en-us/windows/win32/uxguide/win-dialog-box)
+			// Windows: the HIG (https://learn.cec.com.cn/en-us/windows/win32/uxguide/win-dialog-box)
 			// recommend the following:
 			// "One of the following sets of concise commands: Yes/No, Yes/No/Cancel, [Do it]/Cancel,
 			//  [Do it]/[Don't do it], [Do it]/[Don't do it]/Cancel."

@@ -36,7 +36,7 @@ function getWorker(label: string): Worker | Promise<Worker> {
 	// ESM-comment-begin
 	if (typeof require === 'function') {
 		// check if the JS lives on a different origin
-		const workerMain = require.toUrl('vs/base/worker/workerMain.js'); // explicitly using require.toUrl(), see https://github.com/microsoft/vscode/issues/107440#issuecomment-698982321
+		const workerMain = require.toUrl('vs/base/worker/workerMain.js'); // explicitly using require.toUrl(), see https://github.com/opencec/CEC-IDE/issues/107440#issuecomment-698982321
 		const workerUrl = getWorkerBootstrapUrl(workerMain, label);
 		return new Worker(ttPolicy ? ttPolicy.createScriptURL(workerUrl) as unknown as string : workerUrl, { name: label });
 	}
@@ -50,7 +50,7 @@ export function getWorkerBootstrapUrl(scriptPath: string, label: string): string
 		// this is the cross-origin case
 		// i.e. the webpage is running at a different origin than where the scripts are loaded from
 		const myPath = 'vs/base/worker/defaultWorkerFactory.js';
-		const workerBaseUrl = require.toUrl(myPath).slice(0, -myPath.length); // explicitly using require.toUrl(), see https://github.com/microsoft/vscode/issues/107440#issuecomment-698982321
+		const workerBaseUrl = require.toUrl(myPath).slice(0, -myPath.length); // explicitly using require.toUrl(), see https://github.com/opencec/CEC-IDE/issues/107440#issuecomment-698982321
 		const js = `/*${label}*/globalThis.MonacoEnvironment={baseUrl: '${workerBaseUrl}'};const ttPolicy = globalThis.trustedTypes?.createPolicy('defaultWorkerFactory', { createScriptURL: value => value });importScripts(ttPolicy?.createScriptURL('${scriptPath}') ?? '${scriptPath}');/*${label}*/`;
 		const blob = new Blob([js], { type: 'application/javascript' });
 		return URL.createObjectURL(blob);

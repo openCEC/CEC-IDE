@@ -283,7 +283,7 @@ export class TextFileEditorModelManager extends Disposable implements ITextFileE
 
 							// restore previous language only if the language is now unspecified and it was specified
 							// but not when the file was explicitly stored with the plain text extension
-							// (https://github.com/microsoft/vscode/issues/125795)
+							// (https://github.com/opencec/CEC-IDE/issues/125795)
 							if (
 								modelToRestore.languageId &&
 								modelToRestore.languageId !== PLAINTEXT_LANGUAGE_ID &&
@@ -418,7 +418,7 @@ export class TextFileEditorModelManager extends Disposable implements ITextFileE
 
 			// Automatically dispose the model if we created it
 			// because we cannot dispose a model we do not own
-			// https://github.com/microsoft/vscode/issues/138850
+			// https://github.com/opencec/CEC-IDE/issues/138850
 			if (didCreateModel) {
 				model.dispose();
 			}

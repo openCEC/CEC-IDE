@@ -81,7 +81,7 @@
 			}
 
 			const uncRoots = [
-				'\\\\.\\UNC\\',	// DOS Device paths (https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats)
+				'\\\\.\\UNC\\',	// DOS Device paths (https://learn.cec.com.cn/en-us/dotnet/standard/io/file-path-formats)
 				'\\\\?\\UNC\\',
 				'\\\\'			// standard UNC path
 			];

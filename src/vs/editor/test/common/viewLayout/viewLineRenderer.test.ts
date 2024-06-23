@@ -992,7 +992,7 @@ suite('viewLineRenderer.renderLine 2', () => {
 	}
 
 	test('issue #18616: Inline decorations ending at the text length are no longer rendered', () => {
-		const lineContent = 'https://microsoft.com';
+		const lineContent = 'https://cec.com.cn';
 		const actual = renderViewLine(new RenderLineInput(
 			false,
 			true,
@@ -1017,7 +1017,7 @@ suite('viewLineRenderer.renderLine 2', () => {
 
 		assert.deepStrictEqual(inflateRenderLineOutput(actual), ({
 			html: [
-				'<span class="mtk3 link">https://microsoft.com</span>'
+				'<span class="mtk3 link">https://cec.com.cn</span>'
 			],
 			mapping: [
 				[0, 0, 0], [0, 1, 1], [0, 2, 2], [0, 3, 3], [0, 4, 4], [0, 5, 5], [0, 6, 6], [0, 7, 7],

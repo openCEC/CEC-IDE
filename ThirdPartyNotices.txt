@@ -1952,8 +1952,8 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-microsoft/vscode-css 0.0.0 - MIT License
-https://github.com/microsoft/vscode-css
+opencec/CEC-IDE-css 0.0.0 - MIT License
+https://github.com/opencec/CEC-IDE-css
 
 MIT License
 
@@ -1992,8 +1992,8 @@ suitability for any purpose.
 
 ---------------------------------------------------------
 
-microsoft/vscode-JSON.tmLanguage 0.0.0 - MIT
-https://github.com/microsoft/vscode-JSON.tmLanguage
+opencec/CEC-IDE-JSON.tmLanguage 0.0.0 - MIT
+https://github.com/opencec/CEC-IDE-JSON.tmLanguage
 
 vscode-JSON.tmLanguage
 
@@ -2018,8 +2018,8 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 
 ---------------------------------------------------------
 
-microsoft/vscode-markdown-tm-grammar 1.0.0 - MIT
-https://github.com/microsoft/vscode-markdown-tm-grammar
+opencec/CEC-IDE-markdown-tm-grammar 1.0.0 - MIT
+https://github.com/opencec/CEC-IDE-markdown-tm-grammar
 
 The MIT License (MIT)
 
@@ -2046,8 +2046,8 @@ SOFTWARE.
 
 ---------------------------------------------------------
 
-microsoft/vscode-mssql 1.20.0 - MIT
-https://github.com/microsoft/vscode-mssql
+opencec/CEC-IDE-mssql 1.20.0 - MIT
+https://github.com/opencec/CEC-IDE-mssql
 
 ------------------------------------------ START OF LICENSE -----------------------------------------
 vscode-mssql
@@ -2665,7 +2665,7 @@ written authorization of the copyright holder.
 ---------------------------------------------------------
 
 vscode-codicons 0.0.14 - MIT and Creative Commons Attribution 4.0
-https://github.com/microsoft/vscode-codicons
+https://github.com/opencec/CEC-IDE-codicons
 
 Attribution 4.0 International
 
@@ -3122,7 +3122,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 ---------------------------------------------------------
 
 vscode-win32-app-container-tokens
-https://github.com/microsoft/vscode-win32-app-container-tokens
+https://github.com/opencec/CEC-IDE-win32-app-container-tokens
 
 MIT License
 

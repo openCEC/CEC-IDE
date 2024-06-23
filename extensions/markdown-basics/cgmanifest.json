@@ -31,8 +31,8 @@
 			"component": {
 				"type": "git",
 				"git": {
-					"name": "microsoft/vscode-markdown-tm-grammar",
-					"repositoryUrl": "https://github.com/microsoft/vscode-markdown-tm-grammar",
+					"name": "opencec/CEC-IDE-markdown-tm-grammar",
+					"repositoryUrl": "https://github.com/opencec/CEC-IDE-markdown-tm-grammar",
 					"commitHash": "c635942289ebf40954e69cf3637aac906465ade8"
 				}
 			},

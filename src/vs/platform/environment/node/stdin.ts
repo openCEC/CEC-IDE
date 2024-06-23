@@ -43,7 +43,7 @@ export async function readFromStdin(targetPath: string, verbose: boolean): Promi
 	let [encoding, iconv] = await Promise.all([
 		resolveTerminalEncoding(verbose),	// respect terminal encoding when piping into file
 		import('@vscode/iconv-lite-umd'),	// lazy load encoding module for usage
-		Promises.appendFile(targetPath, '') // make sure file exists right away (https://github.com/microsoft/vscode/issues/155341)
+		Promises.appendFile(targetPath, '') // make sure file exists right away (https://github.com/opencec/CEC-IDE/issues/155341)
 	]);
 
 	if (!iconv.encodingExists(encoding)) {
@@ -55,7 +55,7 @@ export async function readFromStdin(targetPath: string, verbose: boolean): Promi
 	// which helps file watchers to be aware of the
 	// changes because each append closes the underlying
 	// file descriptor.
-	// (https://github.com/microsoft/vscode/issues/148952)
+	// (https://github.com/opencec/CEC-IDE/issues/148952)
 
 	const appendFileQueue = new Queue();
 

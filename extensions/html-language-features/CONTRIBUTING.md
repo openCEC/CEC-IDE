@@ -1,13 +1,13 @@
 ## Setup
 
-- Clone [microsoft/vscode](https://github.com/microsoft/vscode)
+- Clone [opencec/CEC-IDE](https://github.com/opencec/CEC-IDE)
 - Run `yarn` at `/`, this will install
 	- Dependencies for `/extension/html-language-features/`
 	- Dependencies for `/extension/html-language-features/server/`
 	- devDependencies such as `gulp`
 - Open `/extensions/html-language-features/` as the workspace in VS Code
 - In `/extensions/html-language-features/` run `yarn compile`(or `yarn watch`) to build the client and server
-- Run the [`Launch Extension`](https://github.com/microsoft/vscode/blob/master/extensions/html-language-features/.vscode/launch.json) debug target in the Debug View. This will:
+- Run the [`Launch Extension`](https://github.com/opencec/CEC-IDE/blob/master/extensions/html-language-features/.vscode/launch.json) debug target in the Debug View. This will:
 	- Launch a new VS Code instance with the `html-language-features` extension loaded
 - Open a `.html` file to activate the extension. The extension will start the HTML language server process.
 - Add `"html.trace.server": "verbose"` to the settings to observe the communication between client and server in the `HTML Language Server` output.
@@ -19,15 +19,15 @@
 
 ### Contribute to vscode-html-languageservice
 
-[microsoft/vscode-html-languageservice](https://github.com/microsoft/vscode-html-languageservice) contains the language smarts for html.
+[opencec/CEC-IDE-html-languageservice](https://github.com/opencec/CEC-IDE-html-languageservice) contains the language smarts for html.
 This extension wraps the html language service into a Language Server for VS Code.
-If you want to fix html issues or make improvements, you should make changes at [microsoft/vscode-html-languageservice](https://github.com/microsoft/vscode-html-languageservice).
+If you want to fix html issues or make improvements, you should make changes at [opencec/CEC-IDE-html-languageservice](https://github.com/opencec/CEC-IDE-html-languageservice).
 
 However, within this extension, you can run a development version of `vscode-html-languageservice` to debug code or test language features interactively:
 
 #### Linking `vscode-html-languageservice` in `html-language-features/server/`
 
-- Clone [microsoft/vscode-html-languageservice](https://github.com/microsoft/vscode-html-languageservice)
+- Clone [opencec/CEC-IDE-html-languageservice](https://github.com/opencec/CEC-IDE-html-languageservice)
 - Run `yarn` in `vscode-html-languageservice`
 - Run `yarn link` in `vscode-html-languageservice`. This will compile and link `vscode-html-languageservice`
 - In `html-language-features/server/`, run `yarn link vscode-html-languageservice`

@@ -223,7 +223,7 @@ export class UpToDateInlineCompletions implements IDisposable {
 		this._refCount--;
 		if (this._refCount === 0) {
 			setTimeout(() => {
-				// To fix https://github.com/microsoft/vscode/issues/188348
+				// To fix https://github.com/opencec/CEC-IDE/issues/188348
 				if (!this.textModel.isDisposed()) {
 					// This is just cleanup. It's ok if it happens with a delay.
 					this.textModel.deltaDecorations(this._inlineCompletions.map(i => i.decorationId), []);

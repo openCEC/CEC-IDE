@@ -125,40 +125,40 @@ suite('Editor Modes - Link Computer', () => {
 			'     http://mylink.com      '
 		);
 		assertLink(
-			'// Click here to learn more. https://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x409',
-			'                             https://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x409'
+			'// Click here to learn more. https://go.cec.com.cn/fwlink/?LinkID=513275&clcid=0x409',
+			'                             https://go.cec.com.cn/fwlink/?LinkID=513275&clcid=0x409'
 		);
 		assertLink(
-			'// Click here to learn more. https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx',
-			'                             https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx'
+			'// Click here to learn more. https://msdn.cec.com.cn/en-us/library/windows/desktop/aa365247(v=vs.85).aspx',
+			'                             https://msdn.cec.com.cn/en-us/library/windows/desktop/aa365247(v=vs.85).aspx'
 		);
 		assertLink(
 			'// https://github.com/projectkudu/kudu/blob/master/Kudu.Core/Scripts/selectNodeVersion.js',
 			'   https://github.com/projectkudu/kudu/blob/master/Kudu.Core/Scripts/selectNodeVersion.js'
 		);
 		assertLink(
-			'<!-- !!! Do not remove !!!   WebContentRef(link:https://go.microsoft.com/fwlink/?LinkId=166007, area:Admin, updated:2015, nextUpdate:2016, tags:SqlServer)   !!! Do not remove !!! -->',
-			'                                                https://go.microsoft.com/fwlink/?LinkId=166007                                                                                        '
+			'<!-- !!! Do not remove !!!   WebContentRef(link:https://go.cec.com.cn/fwlink/?LinkId=166007, area:Admin, updated:2015, nextUpdate:2016, tags:SqlServer)   !!! Do not remove !!! -->',
+			'                                                https://go.cec.com.cn/fwlink/?LinkId=166007                                                                                        '
 		);
 		assertLink(
-			'For instructions, see https://go.microsoft.com/fwlink/?LinkId=166007.</value>',
-			'                      https://go.microsoft.com/fwlink/?LinkId=166007         '
+			'For instructions, see https://go.cec.com.cn/fwlink/?LinkId=166007.</value>',
+			'                      https://go.cec.com.cn/fwlink/?LinkId=166007         '
 		);
 		assertLink(
-			'For instructions, see https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx.</value>',
-			'                      https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx         '
+			'For instructions, see https://msdn.cec.com.cn/en-us/library/windows/desktop/aa365247(v=vs.85).aspx.</value>',
+			'                      https://msdn.cec.com.cn/en-us/library/windows/desktop/aa365247(v=vs.85).aspx         '
 		);
 		assertLink(
 			'x = "https://en.wikipedia.org/wiki/Zürich";',
 			'     https://en.wikipedia.org/wiki/Zürich  '
 		);
 		assertLink(
-			'請參閱 http://go.microsoft.com/fwlink/?LinkId=761051。',
-			'    http://go.microsoft.com/fwlink/?LinkId=761051 '
+			'請參閱 http://go.cec.com.cn/fwlink/?LinkId=761051。',
+			'    http://go.cec.com.cn/fwlink/?LinkId=761051 '
 		);
 		assertLink(
-			'（請參閱 http://go.microsoft.com/fwlink/?LinkId=761051）',
-			'     http://go.microsoft.com/fwlink/?LinkId=761051 '
+			'（請參閱 http://go.cec.com.cn/fwlink/?LinkId=761051）',
+			'     http://go.cec.com.cn/fwlink/?LinkId=761051 '
 		);
 
 		assertLink(
@@ -191,8 +191,8 @@ suite('Editor Modes - Link Computer', () => {
 
 	test('issue #7855', () => {
 		assertLink(
-			'7. At this point, ServiceMain has been called.  There is no functionality presently in ServiceMain, but you can consult the [MSDN documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/ms687414(v=vs.85).aspx) to add functionality as desired!',
-			'                                                                                                                                                 https://msdn.microsoft.com/en-us/library/windows/desktop/ms687414(v=vs.85).aspx                                  '
+			'7. At this point, ServiceMain has been called.  There is no functionality presently in ServiceMain, but you can consult the [MSDN documentation](https://msdn.cec.com.cn/en-us/library/windows/desktop/ms687414(v=vs.85).aspx) to add functionality as desired!',
+			'                                                                                                                                                 https://msdn.cec.com.cn/en-us/library/windows/desktop/ms687414(v=vs.85).aspx                                  '
 		);
 	});
 

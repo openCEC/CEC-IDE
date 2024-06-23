@@ -77,7 +77,7 @@ export class WorkspaceWatcher extends Disposable {
 				localize('enospcError', "Unable to watch for file changes in this large workspace folder. Please follow the instructions link to resolve this issue."),
 				[{
 					label: localize('learnMore', "Instructions"),
-					run: () => this.openerService.open(URI.parse('https://go.microsoft.com/fwlink/?linkid=867693'))
+					run: () => this.openerService.open(URI.parse('https://go.cec.com.cn/fwlink/?linkid=867693'))
 				}],
 				{
 					sticky: true,

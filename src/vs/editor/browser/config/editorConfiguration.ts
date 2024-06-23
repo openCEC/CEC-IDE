@@ -221,7 +221,7 @@ function getExtraEditorClassName(): string {
 		extra += 'no-user-select ';
 	}
 	if (browser.isSafari) {
-		// See https://github.com/microsoft/vscode/issues/108822
+		// See https://github.com/opencec/CEC-IDE/issues/108822
 		extra += 'no-minimap-shadow ';
 		extra += 'enable-user-select ';
 	}

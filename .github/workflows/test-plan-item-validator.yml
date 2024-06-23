@@ -12,7 +12,7 @@ jobs:
         if: contains(github.event.issue.labels.*.name, 'testplan-item') || contains(github.event.issue.labels.*.name, 'invalid-testplan-item')
         uses: actions/checkout@v3
         with:
-          repository: "microsoft/vscode-github-triage-actions"
+          repository: "opencec/CEC-IDE-github-triage-actions"
           path: ./actions
           ref: stable
       - name: Install Actions
@@ -26,4 +26,4 @@ jobs:
           refLabel: on-testplan
           label: testplan-item
           invalidLabel: invalid-testplan-item
-          comment: Invalid test plan item. See errors below and the [test plan item spec](https://github.com/microsoft/vscode/wiki/Writing-Test-Plan-Items) for more information. This comment will go away when the issues are resolved.
+          comment: Invalid test plan item. See errors below and the [test plan item spec](https://github.com/opencec/CEC-IDE/wiki/Writing-Test-Plan-Items) for more information. This comment will go away when the issues are resolved.

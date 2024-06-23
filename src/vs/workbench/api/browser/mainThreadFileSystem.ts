@@ -191,7 +191,7 @@ export class MainThreadFileSystem implements MainThreadFileSystemShape {
 		// recursive file watcher.
 		// Still allow for non-recursive watch requests as a way
 		// to bypass configured exclude rules though
-		// (see https://github.com/microsoft/vscode/issues/146066)
+		// (see https://github.com/opencec/CEC-IDE/issues/146066)
 		if (workspaceFolder && opts.recursive) {
 			this._logService.trace(`MainThreadFileSystem#$watch(): ignoring request to start watching because path is inside workspace (extension: ${extensionId}, path: ${uri.toString(true)}, recursive: ${opts.recursive}, session: ${session})`);
 			return;
@@ -223,7 +223,7 @@ export class MainThreadFileSystem implements MainThreadFileSystemShape {
 		// such as `bar` for a exclude, will work to exclude any of
 		// `<workspace path>/bar` but will not work as include for files within
 		// `bar` unless a suffix of `/**` if added.
-		// (https://github.com/microsoft/vscode/issues/148245)
+		// (https://github.com/opencec/CEC-IDE/issues/148245)
 		else if (workspaceFolder) {
 			const config = this._configurationService.getValue<IFilesConfiguration>();
 			if (config.files?.watcherExclude) {

@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/181569 @connor4312
+	// https://github.com/opencec/CEC-IDE/issues/181569 @connor4312
 
 	export interface WindowState {
 		/**

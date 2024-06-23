@@ -160,9 +160,9 @@ export async function main(argv: string[]): Promise<any> {
 				// On Windows we use a different strategy of saving the file
 				// by first truncating the file and then writing with r+ mode.
 				// This helps to save hidden files on Windows
-				// (see https://github.com/microsoft/vscode/issues/931) and
+				// (see https://github.com/opencec/CEC-IDE/issues/931) and
 				// prevent removing alternate data streams
-				// (see https://github.com/microsoft/vscode/issues/6363)
+				// (see https://github.com/opencec/CEC-IDE/issues/6363)
 				truncateSync(target, 0);
 				writeFileSync(target, data, { flag: 'r+' });
 			} else {
@@ -215,7 +215,7 @@ export async function main(argv: string[]): Promise<any> {
 
 			// Read from stdin: we require a single "-" argument to be passed in order to start reading from
 			// stdin. We do this because there is no reliable way to find out if data is piped to stdin. Just
-			// checking for stdin being connected to a TTY is not enough (https://github.com/microsoft/vscode/issues/40351)
+			// checking for stdin being connected to a TTY is not enough (https://github.com/opencec/CEC-IDE/issues/40351)
 
 			if (hasReadStdinArg) {
 				stdinFilePath = getStdinFilePath();
@@ -425,7 +425,7 @@ export async function main(argv: string[]): Promise<any> {
 		} else {
 			// On Big Sur, we spawn using the open command to obtain behavior
 			// similar to if the app was launched from the dock
-			// https://github.com/microsoft/vscode/issues/102975
+			// https://github.com/opencec/CEC-IDE/issues/102975
 
 			// The following args are for the open command itself, rather than for VS Code:
 			// -n creates a new instance.
@@ -474,7 +474,7 @@ export async function main(argv: string[]): Promise<any> {
 				// Ignore the _ env var, because the open command
 				// ignores it anyway.
 				// Pass the rest of the env vars in to fix
-				// https://github.com/microsoft/vscode/issues/134696.
+				// https://github.com/opencec/CEC-IDE/issues/134696.
 				if (e !== '_') {
 					spawnArgs.push('--env');
 					spawnArgs.push(`${e}=${env[e]}`);

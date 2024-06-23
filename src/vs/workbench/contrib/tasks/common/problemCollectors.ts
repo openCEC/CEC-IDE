@@ -291,7 +291,7 @@ export abstract class AbstractProblemCollector implements IDisposable {
 		if (!markersPerResource.has(key)) {
 			markersPerResource.set(key, marker);
 		} else if (((existingMarker = markersPerResource.get(key)) !== undefined) && (existingMarker.message.length < marker.message.length) && isWindows) {
-			// Most likely https://github.com/microsoft/vscode/issues/77475
+			// Most likely https://github.com/opencec/CEC-IDE/issues/77475
 			// Heuristic dictates that when the key is the same and message is smaller, we have hit this limitation.
 			markersPerResource.set(key, marker);
 		}
@@ -405,7 +405,7 @@ export class WatchingProblemCollector extends AbstractProblemCollector implement
 
 	private backgroundPatterns: IBackgroundPatterns[];
 
-	// workaround for https://github.com/microsoft/vscode/issues/44018
+	// workaround for https://github.com/opencec/CEC-IDE/issues/44018
 	private _activeBackgroundMatchers: Set<string>;
 
 	// Current State

@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/145307
+	// https://github.com/opencec/CEC-IDE/issues/145307
 
 	export interface Extension<T> {
 

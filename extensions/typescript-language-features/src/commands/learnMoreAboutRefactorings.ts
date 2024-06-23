@@ -13,8 +13,8 @@ export class LearnMoreAboutRefactoringsCommand implements Command {
 
 	public execute() {
 		const docUrl = vscode.window.activeTextEditor && isTypeScriptDocument(vscode.window.activeTextEditor.document)
-			? 'https://go.microsoft.com/fwlink/?linkid=2114477'
-			: 'https://go.microsoft.com/fwlink/?linkid=2116761';
+			? 'https://go.cec.com.cn/fwlink/?linkid=2114477'
+			: 'https://go.cec.com.cn/fwlink/?linkid=2116761';
 
 		vscode.env.openExternal(vscode.Uri.parse(docUrl));
 	}

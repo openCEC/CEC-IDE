@@ -1,6 +1,6 @@
 # Jake - JavaScript build tool
 
-**Notice:** This extension is bundled with Visual Studio Code. It can be disabled but not uninstalled.
+**Notice:** This extension is bundled with CEC-IDE. It can be disabled but not uninstalled.
 
 ## Features
 

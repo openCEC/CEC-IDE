@@ -700,7 +700,7 @@ suite('MarkdownRenderer', () => {
 			});
 
 			test('complete link', () => {
-				const incomplete = 'text [link](http://microsoft.com)';
+				const incomplete = 'text [link](http://cec.com.cn)';
 				const tokens = marked.lexer(incomplete);
 				const newTokens = fillInIncompleteTokens(tokens);
 

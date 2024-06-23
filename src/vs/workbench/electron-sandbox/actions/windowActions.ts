@@ -77,7 +77,7 @@ abstract class BaseZoomAction extends Action2 {
 		level = Math.round(level); // when reaching smallest zoom, prevent fractional zoom levels
 
 		if (level > BaseZoomAction.MAX_ZOOM_LEVEL || level < BaseZoomAction.MIN_ZOOM_LEVEL) {
-			return; // https://github.com/microsoft/vscode/issues/48357
+			return; // https://github.com/opencec/CEC-IDE/issues/48357
 		}
 
 		await configurationService.updateValue(BaseZoomAction.SETTING_KEY, level);

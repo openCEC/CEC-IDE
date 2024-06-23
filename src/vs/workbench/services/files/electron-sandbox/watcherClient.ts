@@ -56,7 +56,7 @@ export class UniversalWatcherClient extends AbstractUniversalWatcherClient {
 		// to prevent access on data structures after process
 		// exit. This only seem to be happening when used from
 		// Electron, not pure node.js.
-		// https://github.com/microsoft/vscode/issues/136264
+		// https://github.com/opencec/CEC-IDE/issues/136264
 		disposables.add(toDisposable(() => watcher.stop()));
 
 		return watcher;

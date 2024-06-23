@@ -193,7 +193,7 @@ export interface IStandaloneEditorConstructionOptions extends IEditorConstructio
 	 * An URL to open when Ctrl+H (Windows and Linux) or Cmd+H (OSX) is pressed in
 	 * the accessibility help dialog in the editor.
 	 *
-	 * Defaults to "https://go.microsoft.com/fwlink/?linkid=852450"
+	 * Defaults to "https://go.cec.com.cn/fwlink/?linkid=852450"
 	 */
 	accessibilityHelpUrl?: string;
 	/**

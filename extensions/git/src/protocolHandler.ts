@@ -50,7 +50,7 @@ export class GitProtocolHandler implements UriHandler {
 			let rawUri = Array.isArray(data.url) ? data.url[0] : data.url;
 
 			// Handle SSH Uri
-			// Ex: git@github.com:microsoft/vscode.git
+			// Ex: git@github.com:opencec/CEC-IDE.git
 			rawUri = rawUri.replace(/^(git@[^\/:]+)(:)/i, 'ssh://$1/');
 
 			cloneUri = Uri.parse(rawUri, true);

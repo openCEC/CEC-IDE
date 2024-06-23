@@ -255,7 +255,7 @@ function loadCode() {
 
 		delete process.env['ELECTRON_RUN_AS_NODE']; // Keep bootstrap-amd.js from redefining 'fs'.
 
-		// See https://github.com/microsoft/vscode-remote-release/issues/6543
+		// See https://github.com/opencec/CEC-IDE-remote-release/issues/6543
 		// We would normally install a SIGPIPE listener in bootstrap.js
 		// But in certain situations, the console itself can be in a broken pipe state
 		// so logging SIGPIPE to the console will cause an infinite async loop

@@ -427,7 +427,7 @@ impl Display for DbusConnectFailedError {
 		str.push_str("Error creating dbus session. This command uses systemd for managing services, you should check that systemd is installed and under your user.");
 
 		if std::env::var("WSL_DISTRO_NAME").is_ok() {
-			str.push_str("\n\nTo enable systemd on WSL, check out: https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/.\n\n");
+			str.push_str("\n\nTo enable systemd on WSL, check out: https://devblogs.cec.com.cn/commandline/systemd-support-is-now-available-in-wsl/.\n\n");
 		}
 
 		str.push_str("If running `systemctl status` works, systemd is ok, but your session dbus may not be. You might need to:\n\n- Install the `dbus-user-session` package, and reboot if it was not installed\n- Start the user dbus session with `systemctl --user enable dbus --now`.\n\nThe error encountered was: ");

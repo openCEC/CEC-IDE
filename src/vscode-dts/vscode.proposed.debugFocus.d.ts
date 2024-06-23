@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// See https://github.com/microsoft/vscode/issues/63943
+	// See https://github.com/opencec/CEC-IDE/issues/63943
 
 	export class ThreadFocus {
 		/**

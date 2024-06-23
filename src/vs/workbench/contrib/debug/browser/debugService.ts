@@ -322,7 +322,7 @@ export class DebugService implements IDebugService {
 	private lazySetup() {
 		if (!this.haveDoneLazySetup) {
 			// Registering fs providers is slow
-			// https://github.com/microsoft/vscode/issues/159886
+			// https://github.com/opencec/CEC-IDE/issues/159886
 			this.disposables.add(this.fileService.registerProvider(DEBUG_MEMORY_SCHEME, new DebugMemoryFileSystemProvider(this)));
 			this.haveDoneLazySetup = true;
 		}

@@ -137,7 +137,7 @@ export class NotificationsToasts extends Themable implements INotificationsToast
 		// against showing too many notifications at once. Since they can always
 		// be accessed from the notification center, a user can always get to
 		// them later on.
-		// (see also https://github.com/microsoft/vscode/issues/107935)
+		// (see also https://github.com/opencec/CEC-IDE/issues/107935)
 		if (this.addedToastsIntervalCounter.increment() > NotificationsToasts.SPAM_PROTECTION.limit) {
 			return;
 		}
@@ -147,7 +147,7 @@ export class NotificationsToasts extends Themable implements INotificationsToast
 		// doing actual work, the animation can cause a lot of slowdown
 		// As such we use `scheduleAtNextAnimationFrame` to push out
 		// the toast until the renderer has time to process it.
-		// (see also https://github.com/microsoft/vscode/issues/107935)
+		// (see also https://github.com/opencec/CEC-IDE/issues/107935)
 		const itemDisposables = new DisposableStore();
 		this.mapNotificationToDisposable.set(item, itemDisposables);
 		itemDisposables.add(scheduleAtNextAnimationFrame(() => this.doAddToast(item, itemDisposables)));

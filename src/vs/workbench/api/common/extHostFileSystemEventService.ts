@@ -58,7 +58,7 @@ class FileSystemWatcher implements vscode.FileSystemWatcher {
 		// we start to ignore events outside the workspace when only a string
 		// pattern is provided to avoid sending events to extensions that are
 		// unexpected.
-		// https://github.com/microsoft/vscode/issues/3025
+		// https://github.com/opencec/CEC-IDE/issues/3025
 		const excludeOutOfWorkspaceEvents = typeof globPattern === 'string';
 
 		const subscription = dispatcher(events => {

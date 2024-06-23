@@ -93,7 +93,7 @@ export class ParcelWatcher extends Disposable implements IRecursiveWatcher {
 	private static readonly FILE_CHANGES_HANDLER_DELAY = 75;
 
 	// Reduce likelyhood of spam from file events via throttling.
-	// (https://github.com/microsoft/vscode/issues/124723)
+	// (https://github.com/opencec/CEC-IDE/issues/124723)
 	private readonly throttledFileChangesEmitter = this._register(new ThrottledWorker<IDiskFileChange>(
 		{
 			maxWorkChunkSize: 500,	// only process up to 500 changes at once before...
@@ -450,7 +450,7 @@ export class ParcelWatcher extends Disposable implements IRecursiveWatcher {
 				// to avoid VS Code closing all opened editors which
 				// can happen e.g. in case of network connectivity
 				// issues
-				// (https://github.com/microsoft/vscode/issues/136673)
+				// (https://github.com/opencec/CEC-IDE/issues/136673)
 
 				rootDeleted = true;
 			} else {
@@ -499,7 +499,7 @@ export class ParcelWatcher extends Disposable implements IRecursiveWatcher {
 		// the watcher consumes so many file descriptors that
 		// we are running into a limit. We only want to warn
 		// once in this case to avoid log spam.
-		// See https://github.com/microsoft/vscode/issues/7950
+		// See https://github.com/opencec/CEC-IDE/issues/7950
 		if (msg.indexOf('No space left on device') !== -1) {
 			if (!this.enospcErrorLogged) {
 				this.error('Inotify limit reached (ENOSPC)', watcher);

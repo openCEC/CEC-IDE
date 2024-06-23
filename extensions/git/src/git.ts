@@ -19,7 +19,7 @@ import { Ref, RefType, Branch, Remote, ForcePushMode, GitErrorCodes, LogOptions,
 import * as byline from 'byline';
 import { StringDecoder } from 'string_decoder';
 
-// https://github.com/microsoft/vscode/issues/65693
+// https://github.com/opencec/CEC-IDE/issues/65693
 const MAX_CLI_LENGTH = 30000;
 
 export interface IGit {
@@ -348,7 +348,7 @@ function getGitErrorCode(stderr: string): string | undefined {
 	return undefined;
 }
 
-// https://github.com/microsoft/vscode/issues/89373
+// https://github.com/opencec/CEC-IDE/issues/89373
 // https://github.com/git-for-windows/git/issues/2478
 function sanitizePath(path: string): string {
 	return path.replace(/^([a-z]):\\/i, (_, letter) => `${letter.toUpperCase()}:\\`);
@@ -2304,7 +2304,7 @@ export class Repository {
 		}
 
 		for (const remote of remotes) {
-			// https://github.com/microsoft/vscode/issues/45271
+			// https://github.com/opencec/CEC-IDE/issues/45271
 			remote.isReadOnly = remote.pushUrl === undefined || remote.pushUrl === 'no_push';
 		}
 

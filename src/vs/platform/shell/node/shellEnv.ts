@@ -205,7 +205,7 @@ async function doResolveUnixShellEnv(logService: ILogService, token: Cancellatio
 
 				delete env['VSCODE_RESOLVING_ENVIRONMENT'];
 
-				// https://github.com/microsoft/vscode/issues/22593#issuecomment-336050758
+				// https://github.com/opencec/CEC-IDE/issues/22593#issuecomment-336050758
 				delete env['XDG_RUNTIME_DIR'];
 
 				logService.trace('getUnixShellEnvironment#result', env);

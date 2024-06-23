@@ -284,7 +284,7 @@ suite('Editor contrib - Move Lines Command honors Indentation Rules', () => {
 		unIndentedLinePattern: /^(?!.*([;{}]|\S:)\s*(\/\/.*|\/[*].*[*]\/\s*)?$)(?!.*(\{[^}"']*|\([^)"']*|\[[^\]"']*|^\s*(\{\}|\(\)|\[\]|(case\b.*|default):))\s*(\/\/.*|\/[*].*[*]\/\s*)?$)(?!^\s*((?!\S.*\/[*]).*[*]\/\s*)?[})\]]|^\s*(case\b.*|default):\s*(\/\/.*|\/[*].*[*]\/\s*)?$)(?!^\s*(for|while|if|else)\b(?!.*[;{}]\s*(\/\/.*|\/[*].*[*]\/\s*)?$))/
 	};
 
-	// https://github.com/microsoft/vscode/issues/28552#issuecomment-307862797
+	// https://github.com/opencec/CEC-IDE/issues/28552#issuecomment-307862797
 	test('first line indentation adjust to 0', () => {
 		const languageService = new LanguageService();
 		const languageConfigurationService = new TestLanguageConfigurationService();
@@ -311,7 +311,7 @@ suite('Editor contrib - Move Lines Command honors Indentation Rules', () => {
 		languageService.dispose();
 	});
 
-	// https://github.com/microsoft/vscode/issues/28552#issuecomment-307867717
+	// https://github.com/opencec/CEC-IDE/issues/28552#issuecomment-307867717
 	test('move lines across block', () => {
 		const languageService = new LanguageService();
 		const languageConfigurationService = new TestLanguageConfigurationService();

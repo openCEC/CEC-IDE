@@ -1,13 +1,13 @@
 ## Setup
 
-- Clone [microsoft/vscode](https://github.com/microsoft/vscode)
+- Clone [opencec/CEC-IDE](https://github.com/opencec/CEC-IDE)
 - Run `yarn` at `/`, this will install
 	- Dependencies for `/extension/json-language-features/`
 	- Dependencies for `/extension/json-language-features/server/`
 	- devDependencies such as `gulp`
 - Open `/extensions/json-language-features/` as the workspace in VS Code
 - In `/extensions/json-language-features/` run `yarn compile`(or `yarn watch`) to build the client and server
-- Run the [`Launch Extension`](https://github.com/microsoft/vscode/blob/master/extensions/json-language-features/.vscode/launch.json) debug target in the Debug View. This will:
+- Run the [`Launch Extension`](https://github.com/opencec/CEC-IDE/blob/master/extensions/json-language-features/.vscode/launch.json) debug target in the Debug View. This will:
 	- Launch a new VS Code instance with the `json-language-features` extension loaded
 - Open a `.json` file to activate the extension. The extension will start the JSON language server process.
 - Add `"json.trace.server": "verbose"` to the settings to observe the communication between client and server in the `JSON Language Server` output.
@@ -20,15 +20,15 @@
 
 ### Contribute to vscode-json-languageservice
 
-[microsoft/vscode-json-languageservice](https://github.com/microsoft/vscode-json-languageservice) is the library that implements the language smarts for JSON.
+[opencec/CEC-IDE-json-languageservice](https://github.com/opencec/CEC-IDE-json-languageservice) is the library that implements the language smarts for JSON.
 The JSON language server forwards most the of requests to the service library.
-If you want to fix JSON issues or make improvements, you should make changes at [microsoft/vscode-json-languageservice](https://github.com/microsoft/vscode-json-languageservice).
+If you want to fix JSON issues or make improvements, you should make changes at [opencec/CEC-IDE-json-languageservice](https://github.com/opencec/CEC-IDE-json-languageservice).
 
 However, within this extension, you can run a development version of `vscode-json-languageservice` to debug code or test language features interactively:
 
 #### Linking `vscode-json-languageservice` in `json-language-features/server/`
 
-- Clone [microsoft/vscode-json-languageservice](https://github.com/microsoft/vscode-json-languageservice)
+- Clone [opencec/CEC-IDE-json-languageservice](https://github.com/opencec/CEC-IDE-json-languageservice)
 - Run `npm install` in `vscode-json-languageservice`
 - Run `npm link` in `vscode-json-languageservice`. This will compile and link `vscode-json-languageservice`
 - In `json-language-features/server/`, run `yarn link vscode-json-languageservice`

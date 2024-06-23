@@ -135,11 +135,11 @@ suite('File Service', () => {
 		service.dispose();
 	});
 
-	test('error from readFile bubbles through (https://github.com/microsoft/vscode/issues/118060) - async', async () => {
+	test('error from readFile bubbles through (https://github.com/opencec/CEC-IDE/issues/118060) - async', async () => {
 		testReadErrorBubbles(true);
 	});
 
-	test('error from readFile bubbles through (https://github.com/microsoft/vscode/issues/118060)', async () => {
+	test('error from readFile bubbles through (https://github.com/opencec/CEC-IDE/issues/118060)', async () => {
 		testReadErrorBubbles(false);
 	});
 
@@ -213,7 +213,7 @@ suite('File Service', () => {
 		disposable.dispose();
 	}
 
-	test('readFile/readFileStream supports cancellation (https://github.com/microsoft/vscode/issues/138805)', async () => {
+	test('readFile/readFileStream supports cancellation (https://github.com/opencec/CEC-IDE/issues/138805)', async () => {
 		const service = new FileService(new NullLogService());
 
 		let readFileStreamReady: DeferredPromise<void> | undefined = undefined;

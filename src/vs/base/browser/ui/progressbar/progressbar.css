@@ -42,8 +42,8 @@
 	/*
 		The more smooth `linear` timing function can cause
 		higher GPU consumption as indicated in
-		https://github.com/microsoft/vscode/issues/97900 &
-		https://github.com/microsoft/vscode/issues/138396
+		https://github.com/opencec/CEC-IDE/issues/97900 &
+		https://github.com/opencec/CEC-IDE/issues/138396
 	*/
 	animation-timing-function: steps(100);
 }

@@ -1,6 +1,6 @@
 [
 	{
-		"c": "// from https://msdn.microsoft.com/en-us/library/dd233160.aspx",
+		"c": "// from https://msdn.cec.com.cn/en-us/library/dd233160.aspx",
 		"t": "source.fsharp comment.line.double-slash.fsharp",
 		"r": {
 			"dark_plus": "comment: #6A9955",

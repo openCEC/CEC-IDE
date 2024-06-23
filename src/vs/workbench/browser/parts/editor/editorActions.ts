@@ -608,7 +608,7 @@ abstract class AbstractCloseAllAction extends Action2 {
 
 			// Windows, Linux: editor will be saved on window change
 			// when a native dialog appears, so just track that separate
-			// (see https://github.com/microsoft/vscode/issues/134250)
+			// (see https://github.com/opencec/CEC-IDE/issues/134250)
 			else if ((isNative && (isWindows || isLinux)) && filesConfigurationService.getAutoSaveMode() === AutoSaveMode.ON_WINDOW_CHANGE && !editor.hasCapability(EditorInputCapabilities.Untitled)) {
 				dirtyAutoSaveOnWindowChangeEditors.add({ editor, groupId });
 			}
@@ -853,7 +853,7 @@ abstract class AbstractMoveCopyGroupAction extends Action2 {
 
 		// Allow the target group to be in alternative locations to support more
 		// scenarios of moving the group to the taret location.
-		// Helps for https://github.com/microsoft/vscode/issues/50741
+		// Helps for https://github.com/opencec/CEC-IDE/issues/50741
 		switch (this.direction) {
 			case GroupDirection.LEFT:
 			case GroupDirection.RIGHT:

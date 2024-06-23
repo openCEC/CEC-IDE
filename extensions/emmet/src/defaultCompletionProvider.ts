@@ -143,7 +143,7 @@ export class DefaultCompletionItemProvider implements vscode.CompletionItemProvi
 			currentNode = getFlatNode(rootNode, offset, true);
 		}
 
-		// Fix for https://github.com/microsoft/vscode/issues/107578
+		// Fix for https://github.com/opencec/CEC-IDE/issues/107578
 		// Validate location if syntax is of styleSheet type to ensure that location is valid for emmet abbreviation.
 		// For an html document containing a <style> node, compute the embeddedCssNode and fetch the flattened node as currentNode.
 		if (!isStyleSheet(document.languageId) && isStyleSheet(syntax) && context.triggerKind !== vscode.CompletionTriggerKind.TriggerForIncompleteCompletions) {
@@ -163,7 +163,7 @@ export class DefaultCompletionItemProvider implements vscode.CompletionItemProvi
 
 		let isNoisePromise: Thenable<boolean> = Promise.resolve(false);
 
-		// Fix for https://github.com/microsoft/vscode/issues/32647
+		// Fix for https://github.com/opencec/CEC-IDE/issues/32647
 		// Check for document symbols in js/ts/jsx/tsx and avoid triggering emmet for abbreviations of the form symbolName.sometext
 		// Presence of > or * or + in the abbreviation denotes valid abbreviation that should trigger emmet
 		if (!isStyleSheet(syntax) && (document.languageId === 'javascript' || document.languageId === 'javascriptreact' || document.languageId === 'typescript' || document.languageId === 'typescriptreact')) {
@@ -187,7 +187,7 @@ export class DefaultCompletionItemProvider implements vscode.CompletionItemProvi
 			const config = getEmmetConfiguration(syntax!);
 			const result = helper.doComplete(toLSTextDocument(document), position, syntax, config);
 
-			// https://github.com/microsoft/vscode/issues/86941
+			// https://github.com/opencec/CEC-IDE/issues/86941
 			if (result && result.items && result.items.length === 1) {
 				if (result.items[0].label === 'widows: ;') {
 					return undefined;

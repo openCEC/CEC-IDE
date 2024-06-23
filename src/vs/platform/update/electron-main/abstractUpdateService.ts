@@ -60,7 +60,7 @@ export abstract class AbstractUpdateService implements IUpdateService {
 	/**
 	 * This must be called before any other call. This is a performance
 	 * optimization, to avoid using extra CPU cycles before first window open.
-	 * https://github.com/microsoft/vscode/issues/89784
+	 * https://github.com/opencec/CEC-IDE/issues/89784
 	 */
 	protected async initialize(): Promise<void> {
 		if (!this.environmentMainService.isBuilt) {

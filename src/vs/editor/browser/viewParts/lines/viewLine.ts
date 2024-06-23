@@ -355,7 +355,7 @@ const enum Constants {
 	 * method is only viable for short lines. For longer lines, we look up the real position of
 	 * every 300th character and use multiplication based on that.
 	 *
-	 * See https://github.com/microsoft/vscode/issues/33178
+	 * See https://github.com/opencec/CEC-IDE/issues/33178
 	 */
 	MaxMonospaceDistance = 300
 }

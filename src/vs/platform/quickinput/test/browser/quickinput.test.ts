@@ -32,7 +32,7 @@ async function setupWaitTilShownListener(controller: QuickInputController): Prom
 	}
 }
 
-suite('QuickInput', () => { // https://github.com/microsoft/vscode/issues/147543
+suite('QuickInput', () => { // https://github.com/opencec/CEC-IDE/issues/147543
 	let fixture: HTMLElement, controller: QuickInputController, quickpick: IQuickPick<IQuickPickItem>;
 
 	function getScrollTop(): number {

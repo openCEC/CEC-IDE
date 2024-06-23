@@ -13,7 +13,7 @@ resources:
 
     - repository: distro
       type: github
-      name: microsoft/vscode-distro
+      name: opencec/CEC-IDE-distro
       ref: refs/heads/distro
       endpoint: Monaco
 

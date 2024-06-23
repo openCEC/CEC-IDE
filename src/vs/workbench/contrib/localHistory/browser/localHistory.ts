@@ -23,7 +23,7 @@ export function getLocalHistoryDateFormatter(): ILocalHistoryDateFormatter {
 		try {
 			formatter = new Intl.DateTimeFormat(language, options);
 		} catch (error) {
-			formatter = new Intl.DateTimeFormat(undefined, options); // error can happen when language is invalid (https://github.com/microsoft/vscode/issues/147086)
+			formatter = new Intl.DateTimeFormat(undefined, options); // error can happen when language is invalid (https://github.com/opencec/CEC-IDE/issues/147086)
 		}
 
 		localHistoryDateFormatter = {

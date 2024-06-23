@@ -1288,7 +1288,7 @@ export class CompressibleAsyncDataTree<TInput, T, TFilterData = void> extends As
 					const id = getId(compressedNode.elements[i].element as T);
 					const element = compressedNode.elements[compressedNode.elements.length - 1].element as T;
 
-					// github.com/microsoft/vscode/issues/85938
+					// github.com/opencec/CEC-IDE/issues/85938
 					if (oldSelection.has(id) && selection.indexOf(element) === -1) {
 						selection.push(element);
 						didChangeSelection = true;

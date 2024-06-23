@@ -8,7 +8,7 @@ import { commands, ConfigurationTarget, Disposable, env, EnvironmentVariableMuta
 import { assertNoRpc, poll } from '../utils';
 
 // Disable terminal tests:
-// - Web https://github.com/microsoft/vscode/issues/92826
+// - Web https://github.com/opencec/CEC-IDE/issues/92826
 (env.uiKind === UIKind.Web ? suite.skip : suite)('vscode API - terminal', () => {
 	let extensionContext: ExtensionContext;
 
@@ -18,7 +18,7 @@ import { assertNoRpc, poll } from '../utils';
 		extensionContext = (global as any).testExtensionContext;
 
 		const config = workspace.getConfiguration('terminal.integrated');
-		// Disable conpty in integration tests because of https://github.com/microsoft/vscode/issues/76548
+		// Disable conpty in integration tests because of https://github.com/opencec/CEC-IDE/issues/76548
 		await config.update('windowsEnableConpty', false, ConfigurationTarget.Global);
 		// Disable exit alerts as tests may trigger then and we're not testing the notifications
 		await config.update('showExitAlert', false, ConfigurationTarget.Global);
@@ -540,7 +540,7 @@ import { assertNoRpc, poll } from '../utils';
 			// 	const terminal = window.createTerminal({ name: 'foo', pty });
 			// });
 
-			// TODO: Fix test, flaky in CI (local and remote) https://github.com/microsoft/vscode/issues/137155
+			// TODO: Fix test, flaky in CI (local and remote) https://github.com/opencec/CEC-IDE/issues/137155
 			test.skip('should respect dimension overrides', async () => {
 				const writeEmitter = new EventEmitter<string>();
 				const overrideDimensionsEmitter = new EventEmitter<TerminalDimensions>();

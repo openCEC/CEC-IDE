@@ -70,7 +70,7 @@ class DeprecatedExtensionMigratorContribution {
 						this.configurationService.updateValue(nativeBracketPairColorizationEnabledKey, true, ConfigurationTarget.USER);
 					}) : undefined,
 					new Action('', localize('bracketPairColorizer.notification.action.showMoreInfo', "More Info"), undefined, undefined, () => {
-						this.openerService.open('https://github.com/microsoft/vscode/issues/155179');
+						this.openerService.open('https://github.com/opencec/CEC-IDE/issues/155179');
 					}),
 				].filter(isDefined),
 			}

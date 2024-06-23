@@ -238,7 +238,7 @@ class FileServiceBasedConfiguration extends Disposable {
 		this.allResources = [this.settingsResource, ...this.standAloneConfigurationResources.map(([, resource]) => resource)];
 		this._register(combinedDisposable(...this.allResources.map(resource => combinedDisposable(
 			this.fileService.watch(uriIdentityService.extUri.dirname(resource)),
-			// Also listen to the resource incase the resource is a symlink - https://github.com/microsoft/vscode/issues/118134
+			// Also listen to the resource incase the resource is a symlink - https://github.com/opencec/CEC-IDE/issues/118134
 			this.fileService.watch(resource)
 		))));
 

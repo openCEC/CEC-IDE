@@ -34,7 +34,7 @@ export class OutputLinkComputer {
 		// This means that we will be able to detect links for paths that
 		// contain any of the workspace roots as segments.
 		const workspaceFolders = createData.workspaceFolders
-			.sort((resourceStrA, resourceStrB) => resourceStrB.length - resourceStrA.length) // longest paths first (for https://github.com/microsoft/vscode/issues/88121)
+			.sort((resourceStrA, resourceStrB) => resourceStrB.length - resourceStrA.length) // longest paths first (for https://github.com/opencec/CEC-IDE/issues/88121)
 			.map(resourceStr => URI.parse(resourceStr));
 
 		for (const workspaceFolder of workspaceFolders) {

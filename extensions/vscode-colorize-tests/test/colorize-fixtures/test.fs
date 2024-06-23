@@ -1,4 +1,4 @@
-// from https://msdn.microsoft.com/en-us/library/dd233160.aspx
+// from https://msdn.cec.com.cn/en-us/library/dd233160.aspx
 
 // The declaration creates a constructor that takes two values, name and age.
 type Person(name:string, age:int) =

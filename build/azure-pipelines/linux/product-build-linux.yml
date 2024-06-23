@@ -152,7 +152,7 @@ steps:
       displayName: Mixin distro node modules
 
   - ${{ else }}:
-    # Ref https://github.com/microsoft/vscode/issues/189019
+    # Ref https://github.com/opencec/CEC-IDE/issues/189019
     # for the node-gyp rebuild step
     - script: |
         set -e
@@ -326,13 +326,13 @@ steps:
       displayName: Generate SBOM (client)
       inputs:
         BuildDropPath: $(agent.builddirectory)/VSCode-linux-$(VSCODE_ARCH)
-        PackageName: Visual Studio Code
+        PackageName: CEC-IDE
 
     - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
       displayName: Generate SBOM (server)
       inputs:
         BuildDropPath: $(agent.builddirectory)/vscode-server-linux-$(VSCODE_ARCH)
-        PackageName: Visual Studio Code Server
+        PackageName: CEC-IDE Server
 
     - publish: $(agent.builddirectory)/VSCode-linux-$(VSCODE_ARCH)/_manifest
       displayName: Publish SBOM (client)

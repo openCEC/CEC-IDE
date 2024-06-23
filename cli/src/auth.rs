@@ -275,7 +275,7 @@ impl StorageImplementation for ThreadKeyringStorage {
 #[derive(Default)]
 struct KeyringStorage {
 	// keywring storage can be split into multiple entries due to entry length limits
-	// on Windows https://github.com/microsoft/vscode-cli/issues/358
+	// on Windows https://github.com/opencec/CEC-IDE-cli/issues/358
 	entries: Vec<keyring::Entry>,
 }
 

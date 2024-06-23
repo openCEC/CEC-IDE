@@ -114,7 +114,7 @@ export function setup() {
 					await terminal.assertCommandDecorations({ placeholder: 1, success: 1, error: 1 });
 				});
 			});
-			// TODO: This depends on https://github.com/microsoft/vscode/issues/146587
+			// TODO: This depends on https://github.com/opencec/CEC-IDE/issues/146587
 			describe.skip('Final Term sequences', () => {
 				it('should handle the simple case', async () => {
 					await terminal.runCommandWithValue(TerminalCommandIdWithValue.WriteDataToTerminal, `${ft('A')}Prompt> ${ft('B')}exitcode 0`);

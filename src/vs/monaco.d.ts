@@ -263,7 +263,7 @@ declare namespace monaco {
 	}
 	/**
 	 * Virtual Key Codes, the value does not hold any inherent meaning.
-	 * Inspired somewhat from https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
+	 * Inspired somewhat from https://msdn.cec.com.cn/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
 	 * But these are "more general", as they should work across browsers & OS`s.
 	 */
 	export enum KeyCode {
@@ -1403,7 +1403,7 @@ declare namespace monaco.editor {
 		 * An URL to open when Ctrl+H (Windows and Linux) or Cmd+H (OSX) is pressed in
 		 * the accessibility help dialog in the editor.
 		 *
-		 * Defaults to "https://go.microsoft.com/fwlink/?linkid=852450"
+		 * Defaults to "https://go.cec.com.cn/fwlink/?linkid=852450"
 		 */
 		accessibilityHelpUrl?: string;
 		/**

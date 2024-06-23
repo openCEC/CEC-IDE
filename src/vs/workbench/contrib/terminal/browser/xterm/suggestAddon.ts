@@ -53,7 +53,7 @@ const enum VSCodeOscPt {
  * | 12    | Keyword           | A keyword
  * | 13    | DynamicKeyword    | A dynamic keyword
  *
- * @see https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.completionresulttype?view=powershellsdk-7.0.0
+ * @see https://docs.cec.com.cn/en-us/dotnet/api/system.management.automation.completionresulttype?view=powershellsdk-7.0.0
  */
 const pwshTypeToIconMap: { [type: string]: ThemeIcon | undefined } = {
 	0: Codicon.symbolText,

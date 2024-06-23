@@ -9,7 +9,7 @@ export = new class ApiEventNaming implements eslint.Rule.RuleModule {
 
 	readonly meta: eslint.Rule.RuleMetaData = {
 		messages: {
-			comment: 'region comments should start with a camel case identifier, `:`, then either a GH issue link or owner, e.g #region myProposalName: https://github.com/microsoft/vscode/issues/<number>',
+			comment: 'region comments should start with a camel case identifier, `:`, then either a GH issue link or owner, e.g #region myProposalName: https://github.com/opencec/CEC-IDE/issues/<number>',
 		}
 	};
 

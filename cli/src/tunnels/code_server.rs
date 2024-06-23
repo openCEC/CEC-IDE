@@ -545,8 +545,8 @@ impl<'a> ServerBuilder<'a> {
 		// This spawns a cmd.exe window for the user, which if they close will kill the code-server process
 		// and disconnect the tunnel. To prevent this, pass the CREATE_NO_WINDOW flag to the Command
 		// only on Windows.
-		// Original issue: https://github.com/microsoft/vscode/issues/184058
-		// Partial fix: https://github.com/microsoft/vscode/pull/184621
+		// Original issue: https://github.com/opencec/CEC-IDE/issues/184058
+		// Partial fix: https://github.com/opencec/CEC-IDE/pull/184621
 		#[cfg(target_os = "windows")]
 		let cmd = cmd.creation_flags(winapi::um::winbase::CREATE_NO_WINDOW);
 

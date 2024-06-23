@@ -165,7 +165,7 @@ export class TextFileEditorModel extends BaseTextEditorModel implements ITextFil
 			let newInOrphanModeValidated: boolean = false;
 			if (newInOrphanModeGuess) {
 				// We have received reports of users seeing delete events even though the file still
-				// exists (network shares issue: https://github.com/microsoft/vscode/issues/13665).
+				// exists (network shares issue: https://github.com/opencec/CEC-IDE/issues/13665).
 				// Since we do not want to mark the model as orphaned, we have to check if the
 				// file is really gone and not just a faulty file event.
 				await timeout(100);
@@ -574,7 +574,7 @@ export class TextFileEditorModel extends BaseTextEditorModel implements ITextFil
 
 	protected override installModelListeners(model: ITextModel): void {
 
-		// See https://github.com/microsoft/vscode/issues/30189
+		// See https://github.com/opencec/CEC-IDE/issues/30189
 		// This code has been extracted to a different method because it caused a memory leak
 		// where `value` was captured in the content change listener closure scope.
 
@@ -593,7 +593,7 @@ export class TextFileEditorModel extends BaseTextEditorModel implements ITextFil
 
 		// Remember when the user changed the model through a undo/redo operation.
 		// We need this information to throttle save participants to fix
-		// https://github.com/microsoft/vscode/issues/102542
+		// https://github.com/opencec/CEC-IDE/issues/102542
 		if (isUndoingOrRedoing) {
 			this.lastModelContentChangeFromUndoRedo = Date.now();
 		}
@@ -839,7 +839,7 @@ export class TextFileEditorModel extends BaseTextEditorModel implements ITextFil
 					// - this will undo the save participant change but trigger the save participant right after
 					// - the user has no chance to undo over the save participant
 					//
-					// Reported as: https://github.com/microsoft/vscode/issues/102542
+					// Reported as: https://github.com/opencec/CEC-IDE/issues/102542
 					if (options.reason === SaveReason.AUTO && typeof this.lastModelContentChangeFromUndoRedo === 'number') {
 						const timeFromUndoRedoToSave = Date.now() - this.lastModelContentChangeFromUndoRedo;
 						if (timeFromUndoRedoToSave < TextFileEditorModel.UNDO_REDO_SAVE_PARTICIPANTS_AUTO_SAVE_THROTTLE_THRESHOLD) {
@@ -877,7 +877,7 @@ export class TextFileEditorModel extends BaseTextEditorModel implements ITextFil
 			// was triggerd followed by a dispose() operation right after without waiting. Typically we cannot
 			// be disposed if we are dirty, but if we are not dirty, save() and dispose() can still be triggered
 			// one after the other without waiting for the save() to complete. If we are disposed(), we risk
-			// saving contents to disk that are stale (see https://github.com/microsoft/vscode/issues/50942).
+			// saving contents to disk that are stale (see https://github.com/opencec/CEC-IDE/issues/50942).
 			// To fix this issue, we will not store the contents to disk when we got disposed.
 			if (this.isDisposed()) {
 				return;
@@ -1051,7 +1051,7 @@ export class TextFileEditorModel extends BaseTextEditorModel implements ITextFil
 		// for the new language and apply it, only if the model is
 		// not dirty and only if the encoding was not explicitly set.
 		//
-		// (see https://github.com/microsoft/vscode/issues/127936)
+		// (see https://github.com/opencec/CEC-IDE/issues/127936)
 
 		if (this.hasEncodingSetExplicitly) {
 			this.trace('onMaybeShouldChangeEncoding() - ignoring because encoding was set explicitly');

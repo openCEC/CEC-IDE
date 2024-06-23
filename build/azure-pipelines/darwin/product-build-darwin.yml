@@ -213,13 +213,13 @@ steps:
       displayName: Generate SBOM (client)
       inputs:
         BuildDropPath: $(agent.builddirectory)/VSCode-darwin-$(VSCODE_ARCH)
-        PackageName: Visual Studio Code
+        PackageName: CEC-IDE
 
     - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
       displayName: Generate SBOM (server)
       inputs:
         BuildDropPath: $(agent.builddirectory)/vscode-server-darwin-$(VSCODE_ARCH)
-        PackageName: Visual Studio Code Server
+        PackageName: CEC-IDE Server
 
     - publish: $(agent.builddirectory)/VSCode-darwin-$(VSCODE_ARCH)/_manifest
       displayName: Publish SBOM (client)

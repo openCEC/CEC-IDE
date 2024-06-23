@@ -228,7 +228,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 					zoomFactor: zoomLevelToZoomFactor(windowSettings?.zoomLevel),
 					autoplayPolicy: 'user-gesture-required',
 					// Enable experimental css highlight api https://chromestatus.com/feature/5436441440026624
-					// Refs https://github.com/microsoft/vscode/issues/140098
+					// Refs https://github.com/opencec/CEC-IDE/issues/140098
 					enableBlinkFeatures: 'HighlightAPI',
 					sandbox: true
 				},
@@ -315,7 +315,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 			// thus we need to capture them here with a window hook specific to Windows
 			// and then forward them to the correct window.
 			if (isWindows && useCustomTitleStyle) {
-				const WM_INITMENU = 0x0116; // https://docs.microsoft.com/en-us/windows/win32/menurc/wm-initmenu
+				const WM_INITMENU = 0x0116; // https://docs.cec.com.cn/en-us/windows/win32/menurc/wm-initmenu
 
 				// This sets up a listener for the window hook. This is a Windows-only API provided by electron.
 				this._win.hookWindowMessage(WM_INITMENU, () => {
@@ -353,13 +353,13 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 
 			// TODO@electron (Electron 4 regression): when running on multiple displays where the target display
 			// to open the window has a larger resolution than the primary display, the window will not size
-			// correctly unless we set the bounds again (https://github.com/microsoft/vscode/issues/74872)
+			// correctly unless we set the bounds again (https://github.com/opencec/CEC-IDE/issues/74872)
 			//
-			// Extended to cover Windows as well as Mac (https://github.com/microsoft/vscode/issues/146499)
+			// Extended to cover Windows as well as Mac (https://github.com/opencec/CEC-IDE/issues/146499)
 			//
 			// However, when running with native tabs with multiple windows we cannot use this workaround
 			// because there is a potential that the new window will be added as native tab instead of being
-			// a window on its own. In that case calling setBounds() would cause https://github.com/microsoft/vscode/issues/75830
+			// a window on its own. In that case calling setBounds() would cause https://github.com/opencec/CEC-IDE/issues/75830
 			if ((isMacintosh || isWindows) && hasMultipleDisplays && (!useNativeTabs || BrowserWindow.getAllWindows().length === 1)) {
 				if ([this.windowState.width, this.windowState.height, this.windowState.x, this.windowState.y].every(value => typeof value === 'number')) {
 					this._win.setBounds({
@@ -521,7 +521,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 		// through DOM events. We have our own logic for
 		// unloading a window that should not be confused
 		// with the DOM way.
-		// (https://github.com/microsoft/vscode/issues/122736)
+		// (https://github.com/opencec/CEC-IDE/issues/122736)
 		this._win.webContents.on('will-prevent-unload', event => {
 			event.preventDefault();
 		});
@@ -673,7 +673,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 				// Unresponsive
 				if (type === WindowError.UNRESPONSIVE) {
 					if (this.isExtensionDevelopmentHost || this.isExtensionTestHost || (this._win && this._win.webContents && this._win.webContents.isDevToolsOpened())) {
-						// TODO@electron Workaround for https://github.com/microsoft/vscode/issues/56994
+						// TODO@electron Workaround for https://github.com/opencec/CEC-IDE/issues/56994
 						// In certain cases the window can report unresponsiveness because a breakpoint was hit
 						// and the process is stopped executing. The most typical cases are:
 						// - devtools are opened and debugging happens
@@ -903,10 +903,10 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 		// (as indicated by VSCODE_CLI environment), make sure to
 		// preserve that user environment in subsequent loads,
 		// unless the new configuration context was also a CLI
-		// (for https://github.com/microsoft/vscode/issues/108571)
+		// (for https://github.com/opencec/CEC-IDE/issues/108571)
 		// Also, preserve the environment if we're loading from an
 		// extension development host that had its environment set
-		// (for https://github.com/microsoft/vscode/issues/123508)
+		// (for https://github.com/opencec/CEC-IDE/issues/123508)
 		const currentUserEnv = (this._config ?? this.pendingLoadConfig)?.userEnv;
 		if (currentUserEnv) {
 			const shouldPreserveLaunchCliEnvironment = isLaunchedFromCli(currentUserEnv) && !isLaunchedFromCli(configuration.userEnv);
@@ -918,7 +918,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 
 		// If named pipe was instantiated for the crashpad_handler process, reuse the same
 		// pipe for new app instances connecting to the original app instance.
-		// Ref: https://github.com/microsoft/vscode/issues/115874
+		// Ref: https://github.com/opencec/CEC-IDE/issues/115874
 		if (process.env['CHROME_CRASHPAD_PIPE_NAME']) {
 			Object.assign(configuration.userEnv, {
 				CHROME_CRASHPAD_PIPE_NAME: process.env['CHROME_CRASHPAD_PIPE_NAME']
@@ -1028,7 +1028,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 				display = screen.getDisplayMatching(this.getBounds());
 			} catch (error) {
 				// Electron has weird conditions under which it throws errors
-				// e.g. https://github.com/microsoft/vscode/issues/100334 when
+				// e.g. https://github.com/opencec/CEC-IDE/issues/100334 when
 				// large numbers are passed in
 			}
 
@@ -1041,7 +1041,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 				// Still carry over window dimensions from previous sessions
 				// if we can compute it in fullscreen state.
 				// does not seem possible in all cases on Linux for example
-				// (https://github.com/microsoft/vscode/issues/58218) so we
+				// (https://github.com/opencec/CEC-IDE/issues/58218) so we
 				// fallback to the defaults in that case.
 				width: this.windowState.width || defaultState.width,
 				height: this.windowState.height || defaultState.height,
@@ -1238,7 +1238,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 			displayWorkingArea = this.getWorkingArea(display);
 		} catch (error) {
 			// Electron has weird conditions under which it throws errors
-			// e.g. https://github.com/microsoft/vscode/issues/100334 when
+			// e.g. https://github.com/opencec/CEC-IDE/issues/100334 when
 			// large numbers are passed in
 		}
 
@@ -1261,7 +1261,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 	private getWorkingArea(display: Display): Rectangle | undefined {
 
 		// Prefer the working area of the display to account for taskbars on the
-		// desktop being positioned somewhere (https://github.com/microsoft/vscode/issues/50830).
+		// desktop being positioned somewhere (https://github.com/opencec/CEC-IDE/issues/50830).
 		//
 		// Linux X11 sessions sometimes report wrong display bounds, so we validate
 		// the reported sizes are positive.
@@ -1382,7 +1382,7 @@ export class CodeWindow extends Disposable implements ICodeWindow {
 
 		if (visibility === 'hidden') {
 			// for some weird reason that I have no explanation for, the menu bar is not hiding when calling
-			// this without timeout (see https://github.com/microsoft/vscode/issues/19777). there seems to be
+			// this without timeout (see https://github.com/opencec/CEC-IDE/issues/19777). there seems to be
 			// a timing issue with us opening the first window and the menu bar getting created. somehow the
 			// fact that we want to hide the menu without being able to bring it back via Alt key makes Electron
 			// still show the menu. Unable to reproduce from a simple Hello World application though...

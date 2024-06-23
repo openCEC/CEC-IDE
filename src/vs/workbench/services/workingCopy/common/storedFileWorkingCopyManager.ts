@@ -229,7 +229,7 @@ export class StoredFileWorkingCopyManager<M extends IStoredFileWorkingCopyModel>
 
 		// As long as stored file working copies are pending to be saved, we prolong the shutdown
 		// until that has happened to ensure we are not shutting down in the middle of
-		// writing to the working copy (https://github.com/microsoft/vscode/issues/116600).
+		// writing to the working copy (https://github.com/opencec/CEC-IDE/issues/116600).
 		while ((pendingSavedWorkingCopies = this.workingCopies.filter(workingCopy => workingCopy.hasState(StoredFileWorkingCopyState.PENDING_SAVE))).length > 0) {
 			await Promises.settled(pendingSavedWorkingCopies.map(workingCopy => workingCopy.joinState(StoredFileWorkingCopyState.PENDING_SAVE)));
 		}
@@ -555,7 +555,7 @@ export class StoredFileWorkingCopyManager<M extends IStoredFileWorkingCopyModel>
 
 			// Automatically dispose the working copy if we created
 			// it because we cannot dispose a working copy we do not
-			// own (https://github.com/microsoft/vscode/issues/138850)
+			// own (https://github.com/opencec/CEC-IDE/issues/138850)
 			if (didCreateWorkingCopy) {
 				workingCopy.dispose();
 			}

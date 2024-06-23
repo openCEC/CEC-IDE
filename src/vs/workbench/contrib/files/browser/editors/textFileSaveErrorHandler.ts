@@ -136,7 +136,7 @@ export class TextFileSaveErrorHandler extends Disposable implements ISaveErrorHa
 			const isWriteLocked = fileOperationError.fileOperationResult === FileOperationResult.FILE_WRITE_LOCKED;
 			const triedToUnlock = isWriteLocked && (fileOperationError.options as IWriteFileOptions | undefined)?.unlock;
 			const isPermissionDenied = fileOperationError.fileOperationResult === FileOperationResult.FILE_PERMISSION_DENIED;
-			const canSaveElevated = resource.scheme === Schemas.file; // currently only supported for local schemes (https://github.com/microsoft/vscode/issues/48659)
+			const canSaveElevated = resource.scheme === Schemas.file; // currently only supported for local schemes (https://github.com/opencec/CEC-IDE/issues/48659)
 
 			// Save Elevated
 			if (canSaveElevated && (isPermissionDenied || triedToUnlock)) {
@@ -176,7 +176,7 @@ export class TextFileSaveErrorHandler extends Disposable implements ISaveErrorHa
 		// Show message and keep function to hide in case the file gets saved/reverted
 		const actions: INotificationActions = { primary: primaryActions, secondary: secondaryActions };
 		const handle = this.notificationService.notify({
-			id: `${hash(model.resource.toString())}`, // unique per model (https://github.com/microsoft/vscode/issues/121539)
+			id: `${hash(model.resource.toString())}`, // unique per model (https://github.com/opencec/CEC-IDE/issues/121539)
 			severity: Severity.Error,
 			message,
 			actions
@@ -209,7 +209,7 @@ class ResolveConflictLearnMoreAction extends Action {
 	}
 
 	override async run(): Promise<void> {
-		await this.openerService.open(URI.parse('https://go.microsoft.com/fwlink/?linkid=868264'));
+		await this.openerService.open(URI.parse('https://go.cec.com.cn/fwlink/?linkid=868264'));
 	}
 }
 

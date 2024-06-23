@@ -19,7 +19,7 @@ import { MergeEditorModel } from 'vs/workbench/contrib/mergeEditor/browser/model
 import { MergeEditorTelemetry } from 'vs/workbench/contrib/mergeEditor/browser/telemetry';
 
 suite('merge editor model', () => {
-	// todo: renable when failing case is found https://github.com/microsoft/vscode/pull/190444#issuecomment-1678151428
+	// todo: renable when failing case is found https://github.com/opencec/CEC-IDE/pull/190444#issuecomment-1678151428
 	// ensureNoDisposablesAreLeakedInTestSuite();
 
 	test('prepend line', async () => {

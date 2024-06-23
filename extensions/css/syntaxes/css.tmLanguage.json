@@ -1,10 +1,10 @@
 {
 	"information_for_contributors": [
-		"This file has been converted from https://github.com/microsoft/vscode-css/blob/master/grammars/css.cson",
+		"This file has been converted from https://github.com/opencec/CEC-IDE-css/blob/master/grammars/css.cson",
 		"If you want to provide a fix or improvement, please create a pull request against the original repository.",
 		"Once accepted there, we are happy to receive an update request."
 	],
-	"version": "https://github.com/microsoft/vscode-css/commit/3bd00206f6b0d16eb2eba53fb886462eb8c58baa",
+	"version": "https://github.com/opencec/CEC-IDE-css/commit/3bd00206f6b0d16eb2eba53fb886462eb8c58baa",
 	"name": "CSS",
 	"scopeName": "source.css",
 	"patterns": [

@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/repos/microsoft/vscode
+FROM mcr.cec.com.cn/vscode/devcontainers/repos/opencec/CEC-IDE
 MAINTAINER Microsoft
 
 RUN apt-get install -y software-properties-common python

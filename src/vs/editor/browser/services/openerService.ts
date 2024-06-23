@@ -76,7 +76,7 @@ class EditorOpener implements IOpener {
 		target = uri;
 
 		if (target.scheme === Schemas.file) {
-			target = normalizePath(target); // workaround for non-normalized paths (https://github.com/microsoft/vscode/issues/12954)
+			target = normalizePath(target); // workaround for non-normalized paths (https://github.com/opencec/CEC-IDE/issues/12954)
 		}
 
 		await this._editorService.openCodeEditor(
