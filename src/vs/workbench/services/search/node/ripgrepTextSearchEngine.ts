@@ -280,7 +280,7 @@ export class RipgrepParser extends EventEmitter {
 
 		// it looks like certain regexes can match a line, but cause rg to not
 		// emit any specific submatches for that line.
-		// https://github.com/microsoft/vscode/issues/100569#issuecomment-738496991
+		// https://github.com/opencec/CEC-IDE/issues/100569#issuecomment-738496991
 		if (data.submatches.length === 0) {
 			data.submatches.push(
 				fullText.length

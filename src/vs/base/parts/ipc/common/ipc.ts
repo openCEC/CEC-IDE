@@ -344,7 +344,7 @@ export class ChannelServer<TContext = string> implements IChannelServer<TContext
 	registerChannel(channelName: string, channel: IServerChannel<TContext>): void {
 		this.channels.set(channelName, channel);
 
-		// https://github.com/microsoft/vscode/issues/72531
+		// https://github.com/opencec/CEC-IDE/issues/72531
 		setTimeout(() => this.flushPendingRequests(channelName), 0);
 	}
 

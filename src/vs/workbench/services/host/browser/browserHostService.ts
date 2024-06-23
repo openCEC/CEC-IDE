@@ -370,7 +370,7 @@ export class BrowserHostService extends Disposable implements IHostService {
 	private withServices(fn: (accessor: ServicesAccessor) => unknown): void {
 		// Host service is used in a lot of contexts and some services
 		// need to be resolved dynamically to avoid cyclic dependencies
-		// (https://github.com/microsoft/vscode/issues/108522)
+		// (https://github.com/opencec/CEC-IDE/issues/108522)
 		this.instantiationService.invokeFunction(accessor => fn(accessor));
 	}
 

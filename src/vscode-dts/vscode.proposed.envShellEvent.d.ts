@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// See https://github.com/microsoft/vscode/issues/160694
+	// See https://github.com/opencec/CEC-IDE/issues/160694
 	export namespace env {
 
 		/**

@@ -171,8 +171,8 @@ export class RemoteTunnelService extends Disposable implements IRemoteTunnelServ
 		if (!this._tunnelCommand) {
 			let binParentLocation;
 			if (isMacintosh) {
-				// appRoot = /Applications/Visual Studio Code - Insiders.app/Contents/Resources/app
-				// bin = /Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin
+				// appRoot = /Applications/CEC-IDE - Insiders.app/Contents/Resources/app
+				// bin = /Applications/CEC-IDE - Insiders.app/Contents/Resources/app/bin
 				binParentLocation = this.environmentService.appRoot;
 			} else {
 				// appRoot = C:\Users\<name>\AppData\Local\Programs\Microsoft VS Code Insiders\resources\app

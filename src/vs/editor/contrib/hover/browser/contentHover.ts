@@ -776,7 +776,7 @@ export class ContentHoverWidget extends ResizableContentWidget {
 		const widgetPosition = hoverData.showAtPosition;
 		this._positionPreference = this._findPositionPreference(widgetHeight, widgetPosition) ?? ContentWidgetPositionPreference.ABOVE;
 
-		// See https://github.com/microsoft/vscode/issues/140339
+		// See https://github.com/opencec/CEC-IDE/issues/140339
 		// TODO: Doing a second layout of the hover after force rendering the editor
 		this.onContentsChanged();
 		if (hoverData.stoleFocus) {

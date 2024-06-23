@@ -17,12 +17,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "//repo:microsoft/vscode is:issue closed:>$since"
+    "value": "//repo:opencec/CEC-IDE is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "//repo:microsoft/vscode is:issue created:>$since"
+    "value": "//repo:opencec/CEC-IDE is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -32,12 +32,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-remote-release is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-remote-release is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-remote-release is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-remote-release is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -62,12 +62,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-docs is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-docs is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-docs is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-docs is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -77,12 +77,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-js-debug is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-js-debug is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-js-debug is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-js-debug is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -107,12 +107,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-eslint is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-eslint is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-eslint is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-eslint is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -122,12 +122,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-css-languageservice is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-css-languageservice is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-css-languageservice is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-css-languageservice is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -137,12 +137,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-test is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-test is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-test is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-test is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -152,12 +152,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-pull-request-github is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-pull-request-github is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-test is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-test is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -167,12 +167,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-chrome-debug-core is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-chrome-debug-core is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-chrome-debug-core is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-chrome-debug-core is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -182,12 +182,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-debugadapter-node is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-debugadapter-node is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-debugadapter-node is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-debugadapter-node is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -197,12 +197,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-emmet-helper is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-emmet-helper is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-emmet-helper is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-emmet-helper is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -212,12 +212,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-extension-vscode is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-extension-vscode is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-extension-vscode is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-extension-vscode is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -227,12 +227,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-extension-samples is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-extension-samples is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-extension-samples is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-extension-samples is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -242,12 +242,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-filewatcher-windows is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-filewatcher-windows is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-filewatcher-windows is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-filewatcher-windows is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -257,12 +257,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-generator-code is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-generator-code is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-generator-code is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-generator-code is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -272,12 +272,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-html-languageservice is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-html-languageservice is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-html-languageservice is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-html-languageservice is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -287,12 +287,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-json-languageservice is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-json-languageservice is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-json-languageservice is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-json-languageservice is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -302,7 +302,7 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-languageserver-node is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-languageserver-node is:issue closed:>$since"
   },
   {
     "kind": 1,
@@ -312,7 +312,7 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-languageserver-node is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-languageserver-node is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -322,12 +322,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-loader is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-loader is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-loader is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-loader is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -337,12 +337,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-mono-debug is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-mono-debug is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-mono-debug is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-mono-debug is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -352,12 +352,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-node-debug is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-node-debug is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-node-debug is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-node-debug is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -367,12 +367,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-node-debug2 is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-node-debug2 is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-node-debug2 is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-node-debug2 is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -382,12 +382,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-recipes is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-recipes is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-recipes is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-recipes is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -397,12 +397,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-textmate is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-textmate is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-textmate is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-textmate is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -412,12 +412,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-themes is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-themes is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-themes is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-themes is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -427,12 +427,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-vsce is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-vsce is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-vsce is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-vsce is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -442,12 +442,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-website is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-website is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-website is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-website is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -457,12 +457,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-windows-process-tree is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-windows-process-tree is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-windows-process-tree is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-windows-process-tree is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -607,12 +607,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-jupyter is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-jupyter is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-jupyter is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-jupyter is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -622,12 +622,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-python is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-python is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-python is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-python is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -637,12 +637,12 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-livepreview is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-livepreview is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-livepreview is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-livepreview is:issue created:>$since"
   },
   {
     "kind": 1,
@@ -657,11 +657,11 @@
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-test is:issue closed:>$since"
+    "value": "repo:opencec/CEC-IDE-test is:issue closed:>$since"
   },
   {
     "kind": 2,
     "language": "github-issues",
-    "value": "repo:microsoft/vscode-test is:issue created:>$since"
+    "value": "repo:opencec/CEC-IDE-test is:issue created:>$since"
   }
 ]

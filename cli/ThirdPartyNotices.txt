@@ -2,7 +2,7 @@ NOTICES AND INFORMATION
 Do Not Translate or Localize
 
 This software incorporates material from third parties.
-Microsoft makes certain open source code available at https://3rdpartysource.microsoft.com,
+Microsoft makes certain open source code available at https://3rdpartysource.cec.com.cn,
 or you may send a check or money order for US $5.00, including the product name,
 the open source component name, platform, and version number, to:
 
@@ -7013,7 +7013,7 @@ SOFTWARE.
 ---------------------------------------------------------
 
 russh 6a15199c784c0b6d171a6fec09ed730a5cd1350d
-https://github.com/microsoft/vscode-russh
+https://github.com/opencec/CEC-IDE-russh
 
 Apache License
                            Version 2.0, January 2004
@@ -7221,7 +7221,7 @@ Apache License
 ---------------------------------------------------------
 
 russh-cryptovec 6a15199c784c0b6d171a6fec09ed730a5cd1350d
-https://github.com/microsoft/vscode-russh
+https://github.com/opencec/CEC-IDE-russh
 
 Apache License
                            Version 2.0, January 2004
@@ -7429,7 +7429,7 @@ Apache License
 ---------------------------------------------------------
 
 russh-keys 6a15199c784c0b6d171a6fec09ed730a5cd1350d
-https://github.com/microsoft/vscode-russh
+https://github.com/opencec/CEC-IDE-russh
 
 Apache License
                            Version 2.0, January 2004

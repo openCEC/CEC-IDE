@@ -114,7 +114,7 @@ export function getRoot(path: string, sep: string = posix.sep): string {
 /**
  * Check if the path follows this pattern: `\\hostname\sharename`.
  *
- * @see https://msdn.microsoft.com/en-us/library/gg465305.aspx
+ * @see https://msdn.cec.com.cn/en-us/library/gg465305.aspx
  * @return A boolean indication if the path is a UNC path, on none-windows
  * always false.
  */

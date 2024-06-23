@@ -15,7 +15,7 @@ import { registerActiveInstanceAction } from 'vs/workbench/contrib/terminal/brow
 import { TerminalCommandId } from 'vs/workbench/contrib/terminal/common/terminal';
 import { IEditorService } from 'vs/workbench/services/editor/common/editorService';
 
-// TODO: The rest of the terminal environment changes feature should move here https://github.com/microsoft/vscode/issues/177241
+// TODO: The rest of the terminal environment changes feature should move here https://github.com/opencec/CEC-IDE/issues/177241
 
 registerActiveInstanceAction({
 	id: TerminalCommandId.ShowEnvironmentContributions,

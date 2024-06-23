@@ -83,7 +83,7 @@ interface IScopeData {
 export const REFRESH_NETWORK_FAILURE = 'Network failure';
 
 export class AzureActiveDirectoryService {
-	// For details on why this is set to 2/3... see https://github.com/microsoft/vscode/issues/133201#issuecomment-966668197
+	// For details on why this is set to 2/3... see https://github.com/opencec/CEC-IDE/issues/133201#issuecomment-966668197
 	private static REFRESH_TIMEOUT_MODIFIER = 1000 * 2 / 3;
 	private static POLLING_CONSTANT = 1000 * 60 * 30;
 	private _tokens: IToken[] = [];
@@ -249,7 +249,7 @@ export class AzureActiveDirectoryService {
 
 		// If we still don't have a matching token try to get a new token from an existing token by using
 		// the refreshToken. This is documented here:
-		// https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow#refresh-the-access-token
+		// https://docs.cec.com.cn/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow#refresh-the-access-token
 		// "Refresh tokens are valid for all permissions that your client has already received consent for."
 		if (!matchingTokens.length) {
 			// Get a token with the correct client id.

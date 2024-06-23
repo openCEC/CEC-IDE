@@ -474,7 +474,7 @@ export async function createTocTreeForExtensionSettings(extensionService: IExten
 
 				// If there is a category that matches the setting name,
 				// add the settings in manually as "ungrouped" settings.
-				// https://github.com/microsoft/vscode/issues/137259
+				// https://github.com/opencec/CEC-IDE/issues/137259
 				const ungroupedChild = extensionRootEntry.children!.find(child => child.label === extensionRootEntry.label);
 				if (ungroupedChild && !ungroupedChild.children) {
 					const groupedChildren = extensionRootEntry.children!.filter(child => child !== ungroupedChild);

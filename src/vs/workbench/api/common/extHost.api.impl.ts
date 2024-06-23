@@ -242,7 +242,7 @@ export function createApiFactoryAndRegisterActors(accessor: ServicesAccessor): I
 			let done = !extension.isUnderDevelopment;
 			function informOnce() {
 				if (!done) {
-					extHostLogService.info(`Extension '${extension.identifier.value}' uses a document selector without scheme. Learn more about this: https://go.microsoft.com/fwlink/?linkid=872305`);
+					extHostLogService.info(`Extension '${extension.identifier.value}' uses a document selector without scheme. Learn more about this: https://go.cec.com.cn/fwlink/?linkid=872305`);
 					done = true;
 				}
 			}

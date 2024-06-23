@@ -31,7 +31,7 @@ export interface IEndpointDetails {
 export class PreferencesSearchService extends Disposable implements IPreferencesSearchService {
 	declare readonly _serviceBrand: undefined;
 
-	// @ts-expect-error disable remote search for now, ref https://github.com/microsoft/vscode/issues/172411
+	// @ts-expect-error disable remote search for now, ref https://github.com/opencec/CEC-IDE/issues/172411
 	private _installedExtensions: Promise<ILocalExtension[]>;
 	private _remoteSearchProvider: RemoteSearchProvider | undefined;
 

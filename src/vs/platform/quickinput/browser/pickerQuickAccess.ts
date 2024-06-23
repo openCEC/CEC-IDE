@@ -236,7 +236,7 @@ export abstract class PickerQuickAccessProvider<T extends IPickerQuickAccessItem
 								// fast results. This fixes an issue where the user might
 								// have made a pick active before the additional results
 								// kick in.
-								// See https://github.com/microsoft/vscode/issues/102480
+								// See https://github.com/opencec/CEC-IDE/issues/102480
 								let fallbackActivePick: Pick<T> | undefined = undefined;
 								if (!activePick && !additionalActivePick) {
 									const fallbackActivePickCandidate = picker.activeItems[0];

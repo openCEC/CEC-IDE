@@ -747,7 +747,7 @@ export class UninstallAction extends ExtensionAction {
 		alert(localize('uninstallExtensionStart', "Uninstalling extension {0} started.", this.extension.displayName));
 
 		return this.extensionsWorkbenchService.uninstall(this.extension).then(() => {
-			alert(localize('uninstallExtensionComplete', "Please reload Visual Studio Code to complete the uninstallation of the extension {0}.", this.extension!.displayName));
+			alert(localize('uninstallExtensionComplete', "Please reload CEC-IDE to complete the uninstallation of the extension {0}.", this.extension!.displayName));
 		});
 	}
 }
@@ -2504,7 +2504,7 @@ export class ReinstallAction extends Action {
 				return this.extensionsWorkbenchService.reinstall(extension)
 					.then(extension => {
 						const requireReload = !(extension.local && this.extensionService.canAddExtension(toExtensionDescription(extension.local)));
-						const message = requireReload ? localize('ReinstallAction.successReload', "Please reload Visual Studio Code to complete reinstalling the extension {0}.", extension.identifier.id)
+						const message = requireReload ? localize('ReinstallAction.successReload', "Please reload CEC-IDE to complete reinstalling the extension {0}.", extension.identifier.id)
 							: localize('ReinstallAction.success', "Reinstalling the extension {0} is completed.", extension.identifier.id);
 						const actions = requireReload ? [{
 							label: localize('InstallVSIXAction.reloadNow', "Reload Now"),

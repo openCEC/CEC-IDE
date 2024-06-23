@@ -528,7 +528,7 @@ suite('vscode API - window', () => {
 		assert.ok(!getActiveTabInActiveGroup());
 	});
 
-	// TODO@lramos15 https://github.com/microsoft/vscode/issues/145846
+	// TODO@lramos15 https://github.com/opencec/CEC-IDE/issues/145846
 	// Should ensure to either use existing tab API for modifications
 	// or commands that operate on a dedicated editor that is passed
 	// in as an argument
@@ -852,7 +852,7 @@ suite('vscode API - window', () => {
 		return unexpected;
 	});
 
-	test('showQuickPick, keep selection (microsoft/vscode-azure-account#67)', async function () {
+	test('showQuickPick, keep selection (opencec/CEC-IDE-azure-account#67)', async function () {
 		const picks = window.showQuickPick([
 			{ label: 'eins' },
 			{ label: 'zwei', picked: true },

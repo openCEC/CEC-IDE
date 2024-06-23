@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/46726
+	// https://github.com/opencec/CEC-IDE/issues/46726
 
 	export interface IssueUriRequestHandler {
 		/**

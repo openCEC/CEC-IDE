@@ -128,7 +128,7 @@ import { FileAccess } from 'vs/base/common/network';
 		// Unwind from the event call stack: we have seen crashes in Parcel
 		// when e.g. calling `unsubscribe` directly from the stack of a file
 		// change event
-		// Refs: https://github.com/microsoft/vscode/issues/137430
+		// Refs: https://github.com/opencec/CEC-IDE/issues/137430
 		await timeout(1);
 
 		return res;

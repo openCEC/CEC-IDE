@@ -43,11 +43,11 @@ export = new class implements eslint.Rule.RuleModule {
 
 	readonly meta: eslint.Rule.RuleMetaData = {
 		messages: {
-			badImport: 'Imports violates \'{{restrictions}}\' restrictions. See https://github.com/microsoft/vscode/wiki/Source-Code-Organization',
-			badFilename: 'Missing definition in `code-import-patterns` for this file. Define rules at https://github.com/microsoft/vscode/blob/main/.eslintrc.json'
+			badImport: 'Imports violates \'{{restrictions}}\' restrictions. See https://github.com/opencec/CEC-IDE/wiki/Source-Code-Organization',
+			badFilename: 'Missing definition in `code-import-patterns` for this file. Define rules at https://github.com/opencec/CEC-IDE/blob/main/.eslintrc.json'
 		},
 		docs: {
-			url: 'https://github.com/microsoft/vscode/wiki/Source-Code-Organization'
+			url: 'https://github.com/opencec/CEC-IDE/wiki/Source-Code-Organization'
 		}
 	};
 

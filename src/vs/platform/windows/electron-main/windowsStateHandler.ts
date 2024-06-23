@@ -77,7 +77,7 @@ export class WindowsStateHandler extends Disposable {
 
 		// When a window looses focus, save all windows state. This allows to
 		// prevent loss of window-state data when OS is restarted without properly
-		// shutting down the application (https://github.com/microsoft/vscode/issues/87171)
+		// shutting down the application (https://github.com/opencec/CEC-IDE/issues/87171)
 		app.on('browser-window-blur', () => {
 			if (!this.shuttingDown) {
 				this.saveWindowsState();
@@ -387,7 +387,7 @@ export class WindowsStateHandler extends Disposable {
 			} else if ((windowConfig.newWindowDimensions === 'inherit' || windowConfig.newWindowDimensions === 'offset') && lastActive) {
 				const lastActiveState = lastActive.serializeWindowState();
 				if (lastActiveState.mode === WindowMode.Fullscreen) {
-					state.mode = WindowMode.Fullscreen; // only take mode (fixes https://github.com/microsoft/vscode/issues/19331)
+					state.mode = WindowMode.Fullscreen; // only take mode (fixes https://github.com/opencec/CEC-IDE/issues/19331)
 				} else {
 					state = lastActiveState;
 				}

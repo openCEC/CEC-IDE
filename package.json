@@ -225,10 +225,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/vscode.git"
+    "url": "https://github.com/opencec/CEC-IDE.git"
   },
   "bugs": {
-    "url": "https://github.com/microsoft/vscode/issues"
+    "url": "https://github.com/opencec/CEC-IDE/issues"
   },
   "optionalDependencies": {
     "windows-foreground-love": "0.5.0"

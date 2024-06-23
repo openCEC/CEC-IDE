@@ -122,7 +122,7 @@ cfg_if::cfg_if! {
 			let client = loop {
 				match ClientOptions::new().open(path) {
 					Ok(client) => break client,
-					// ERROR_PIPE_BUSY https://docs.microsoft.com/en-us/windows/win32/debug/system-error-codes--0-499-
+					// ERROR_PIPE_BUSY https://docs.cec.com.cn/en-us/windows/win32/debug/system-error-codes--0-499-
 					Err(e) if e.raw_os_error() == Some(231) => sleep(Duration::from_millis(100)).await,
 					Err(e) => return Err(CodeError::AsyncPipeFailed(e)),
 				}

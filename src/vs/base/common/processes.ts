@@ -137,19 +137,19 @@ export function removeDangerousEnvVariables(env: IProcessEnvironment | undefined
 	}
 
 	// Unset `DEBUG`, as an invalid value might lead to process crashes
-	// See https://github.com/microsoft/vscode/issues/130072
+	// See https://github.com/opencec/CEC-IDE/issues/130072
 	delete env['DEBUG'];
 
 	if (isMacintosh) {
 		// Unset `DYLD_LIBRARY_PATH`, as it leads to process crashes
-		// See https://github.com/microsoft/vscode/issues/104525
-		// See https://github.com/microsoft/vscode/issues/105848
+		// See https://github.com/opencec/CEC-IDE/issues/104525
+		// See https://github.com/opencec/CEC-IDE/issues/105848
 		delete env['DYLD_LIBRARY_PATH'];
 	}
 
 	if (isLinux) {
 		// Unset `LD_PRELOAD`, as it might lead to process crashes
-		// See https://github.com/microsoft/vscode/issues/134177
+		// See https://github.com/opencec/CEC-IDE/issues/134177
 		delete env['LD_PRELOAD'];
 	}
 }

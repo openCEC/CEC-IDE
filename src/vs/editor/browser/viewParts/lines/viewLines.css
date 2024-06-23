@@ -40,7 +40,7 @@
 	-webkit-user-select: none;
 }
 /* Use user-select: text for lookup feature on macOS */
-/* https://github.com/microsoft/vscode/issues/85632 */
+/* https://github.com/opencec/CEC-IDE/issues/85632 */
 .monaco-editor.mac .lines-content:hover,
 .monaco-editor.mac .view-line:hover,
 .monaco-editor.mac .view-lines:hover {

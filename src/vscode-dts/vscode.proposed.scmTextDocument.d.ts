@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 declare module 'vscode' {
-	// https://github.com/microsoft/vscode/issues/166615
+	// https://github.com/opencec/CEC-IDE/issues/166615
 
 	/**
 	 * Represents the input box in the Source Control viewlet.

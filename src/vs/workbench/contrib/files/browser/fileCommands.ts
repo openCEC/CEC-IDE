@@ -380,9 +380,9 @@ async function saveSelectedEditors(accessor: ServicesAccessor, options?: ISaveEd
 			// In addition, we require the secondary side to be modified to not
 			// trigger a touch operation unexpectedly.
 			//
-			// See also https://github.com/microsoft/vscode/issues/4180
-			// See also https://github.com/microsoft/vscode/issues/106330
-			// See also https://github.com/microsoft/vscode/issues/190210
+			// See also https://github.com/opencec/CEC-IDE/issues/4180
+			// See also https://github.com/opencec/CEC-IDE/issues/106330
+			// See also https://github.com/opencec/CEC-IDE/issues/190210
 			if (
 				activeGroup.activeEditor instanceof SideBySideEditorInput &&
 				!options?.saveAs && !(activeGroup.activeEditor.primary.hasCapability(EditorInputCapabilities.Untitled) || activeGroup.activeEditor.secondary.hasCapability(EditorInputCapabilities.Untitled)) &&

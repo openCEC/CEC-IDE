@@ -18,7 +18,7 @@ suite('createEditAddingLinksForUriList', () => {
 			getText: function () { return 'hello world!'; },
 		};
 
-		const result = await createEditAddingLinksForUriList(skinnyDocument, [new vscode.Range(0, 0, 0, 12)], 'https://www.microsoft.com/', true, true, new vscode.CancellationTokenSource().token);
+		const result = await createEditAddingLinksForUriList(skinnyDocument, [new vscode.Range(0, 0, 0, 12)], 'https://www.cec.com.cn/', true, true, new vscode.CancellationTokenSource().token);
 		// need to check the actual result -> snippet value
 		assert.strictEqual(result?.label, 'Insert Markdown Link');
 	});
@@ -26,22 +26,22 @@ suite('createEditAddingLinksForUriList', () => {
 	suite('validateLink', () => {
 
 		test('Markdown pasting should occur for a valid link.', () => {
-			const isLink = validateLink('https://www.microsoft.com/').isValid;
+			const isLink = validateLink('https://www.cec.com.cn/').isValid;
 			assert.strictEqual(isLink, true);
 		});
 
 		test('Markdown pasting should occur for a valid link preceded by a new line.', () => {
-			const isLink = validateLink('\r\nhttps://www.microsoft.com/').isValid;
+			const isLink = validateLink('\r\nhttps://www.cec.com.cn/').isValid;
 			assert.strictEqual(isLink, true);
 		});
 
 		test('Markdown pasting should occur for a valid link followed by a new line.', () => {
-			const isLink = validateLink('https://www.microsoft.com/\r\n').isValid;
+			const isLink = validateLink('https://www.cec.com.cn/\r\n').isValid;
 			assert.strictEqual(isLink, true);
 		});
 
 		test('Markdown pasting should not occur for a valid hostname and invalid protool.', () => {
-			const isLink = validateLink('invalid:www.microsoft.com').isValid;
+			const isLink = validateLink('invalid:www.cec.com.cn').isValid;
 			assert.strictEqual(isLink, false);
 		});
 
@@ -61,27 +61,27 @@ suite('createEditAddingLinksForUriList', () => {
 		});
 
 		test('Markdown pasting should not occur for a link followed by text.', () => {
-			const isLink = validateLink('https://www.microsoft.com/ hello world!').isValid;
+			const isLink = validateLink('https://www.cec.com.cn/ hello world!').isValid;
 			assert.strictEqual(isLink, false);
 		});
 
 		test('Markdown pasting should occur for a link preceded or followed by spaces.', () => {
-			const isLink = validateLink('     https://www.microsoft.com/     ').isValid;
+			const isLink = validateLink('     https://www.cec.com.cn/     ').isValid;
 			assert.strictEqual(isLink, true);
 		});
 
 		test('Markdown pasting should not occur for a link with an invalid scheme.', () => {
-			const isLink = validateLink('hello:www.microsoft.com').isValid;
+			const isLink = validateLink('hello:www.cec.com.cn').isValid;
 			assert.strictEqual(isLink, false);
 		});
 
 		test('Markdown pasting should not occur for multiple links being pasted.', () => {
-			const isLink = validateLink('https://www.microsoft.com/\r\nhttps://www.microsoft.com/\r\nhttps://www.microsoft.com/\r\nhttps://www.microsoft.com/').isValid;
+			const isLink = validateLink('https://www.cec.com.cn/\r\nhttps://www.cec.com.cn/\r\nhttps://www.cec.com.cn/\r\nhttps://www.cec.com.cn/').isValid;
 			assert.strictEqual(isLink, false);
 		});
 
 		test('Markdown pasting should not occur for multiple links with spaces being pasted.', () => {
-			const isLink = validateLink('https://www.microsoft.com/    \r\nhttps://www.microsoft.com/\r\nhttps://www.microsoft.com/\r\n hello \r\nhttps://www.microsoft.com/').isValid;
+			const isLink = validateLink('https://www.cec.com.cn/    \r\nhttps://www.cec.com.cn/\r\nhttps://www.cec.com.cn/\r\n hello \r\nhttps://www.cec.com.cn/').isValid;
 			assert.strictEqual(isLink, false);
 		});
 
@@ -100,21 +100,21 @@ suite('createEditAddingLinksForUriList', () => {
 		});
 
 		test('Should create Markdown link snippet when pasteAsMarkdownLink is true', () => {
-			const uriString = 'https://www.microsoft.com';
+			const uriString = 'https://www.cec.com.cn';
 			const snippet = appendToLinkSnippet(new vscode.SnippetString(''), '', uriString, 0, true);
-			assert.strictEqual(snippet?.value, '[${0:Title}](https://www.microsoft.com)');
+			assert.strictEqual(snippet?.value, '[${0:Title}](https://www.cec.com.cn)');
 		});
 
 		test('Should use an unencoded URI string in Markdown link when passing in an external browser link', () => {
-			const uriString = 'https://www.microsoft.com';
+			const uriString = 'https://www.cec.com.cn';
 			const snippet = appendToLinkSnippet(new vscode.SnippetString(''), '', uriString, 0, true);
-			assert.strictEqual(snippet?.value, '[${0:Title}](https://www.microsoft.com)');
+			assert.strictEqual(snippet?.value, '[${0:Title}](https://www.cec.com.cn)');
 		});
 
 		test('Should not decode an encoded URI string when passing in an external browser link', () => {
-			const uriString = 'https://www.microsoft.com/%20';
+			const uriString = 'https://www.cec.com.cn/%20';
 			const snippet = appendToLinkSnippet(new vscode.SnippetString(''), '', uriString, 0, true);
-			assert.strictEqual(snippet?.value, '[${0:Title}](https://www.microsoft.com/%20)');
+			assert.strictEqual(snippet?.value, '[${0:Title}](https://www.cec.com.cn/%20)');
 		});
 
 		test('Should not encode an unencoded URI string when passing in an external browser link', () => {
@@ -139,13 +139,13 @@ suite('createEditAddingLinksForUriList', () => {
 		});
 
 		test('Should evaluate pasteAsMarkdownLink as false for a valid selected link', () => {
-			skinnyDocument.getText = function () { return 'https://www.microsoft.com'; };
+			skinnyDocument.getText = function () { return 'https://www.cec.com.cn'; };
 			const pasteAsMarkdownLink = checkSmartPaste(skinnyDocument, new vscode.Range(0, 0, 0, 25), new vscode.Range(0, 0, 0, 25));
 			assert.strictEqual(pasteAsMarkdownLink, false);
 		});
 
 		test('Should evaluate pasteAsMarkdownLink as false for a valid selected link with trailing whitespace', () => {
-			skinnyDocument.getText = function () { return '   https://www.microsoft.com  '; };
+			skinnyDocument.getText = function () { return '   https://www.cec.com.cn  '; };
 			const pasteAsMarkdownLink = checkSmartPaste(skinnyDocument, new vscode.Range(0, 0, 0, 30), new vscode.Range(0, 0, 0, 30));
 			assert.strictEqual(pasteAsMarkdownLink, false);
 		});

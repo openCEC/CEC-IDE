@@ -43,7 +43,7 @@ suite('Suggest Widget Model', () => {
 		});
 	});
 
-	// This test is skipped because the fix for this causes https://github.com/microsoft/vscode/issues/166023
+	// This test is skipped because the fix for this causes https://github.com/opencec/CEC-IDE/issues/166023
 	test.skip('Active', async () => {
 		await withAsyncTestCodeEditorAndInlineCompletionsModel('',
 			{ fakeClock: true, provider, },

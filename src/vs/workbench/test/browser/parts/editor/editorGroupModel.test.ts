@@ -1911,7 +1911,7 @@ suite('EditorGroupModel', () => {
 		assert.ok(group1Listener.disposed[1].editor.matches(input3));
 	});
 
-	test('Preview tab does not have a stable position (https://github.com/microsoft/vscode/issues/8245)', function () {
+	test('Preview tab does not have a stable position (https://github.com/opencec/CEC-IDE/issues/8245)', function () {
 		const group1 = createEditorGroupModel();
 
 		const input1 = input();

@@ -210,7 +210,7 @@ export class NativeWindow extends Disposable {
 				},
 				{
 					label: localize('learnMore', "Learn More"),
-					run: () => this.openerService.open('https://go.microsoft.com/fwlink/?linkid=2149667')
+					run: () => this.openerService.open('https://go.cec.com.cn/fwlink/?linkid=2149667')
 				}]
 			);
 		});
@@ -221,7 +221,7 @@ export class NativeWindow extends Disposable {
 				localize('keychainWriteError', "Writing login information to the keychain failed with error '{0}'.", message),
 				[{
 					label: localize('troubleshooting', "Troubleshooting Guide"),
-					run: () => this.openerService.open('https://go.microsoft.com/fwlink/?linkid=2190713')
+					run: () => this.openerService.open('https://go.cec.com.cn/fwlink/?linkid=2190713')
 				}]
 			);
 		});
@@ -702,7 +702,7 @@ export class NativeWindow extends Disposable {
 		if (this.environmentService.isBuilt) {
 			let installLocationUri: URI;
 			if (isMacintosh) {
-				// appRoot = /Applications/Visual Studio Code - Insiders.app/Contents/Resources/app
+				// appRoot = /Applications/CEC-IDE - Insiders.app/Contents/Resources/app
 				installLocationUri = dirname(dirname(dirname(URI.file(this.environmentService.appRoot))));
 			} else {
 				// appRoot = C:\Users\<name>\AppData\Local\Programs\Microsoft VS Code Insiders\resources\app
@@ -761,7 +761,7 @@ export class NativeWindow extends Disposable {
 			location: ProgressLocation.Window,
 			delay: 1600,
 			buttons: [localize('learnMore', "Learn More")]
-		}, () => shellEnv, () => this.openerService.open('https://go.microsoft.com/fwlink/?linkid=2149667'));
+		}, () => shellEnv, () => this.openerService.open('https://go.cec.com.cn/fwlink/?linkid=2149667'));
 	}
 
 	private setupDriver(): void {

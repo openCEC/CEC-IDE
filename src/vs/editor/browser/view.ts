@@ -135,7 +135,7 @@ export class View extends ViewEventHandler {
 
 		this.domNode = createFastDomNode(document.createElement('div'));
 		this.domNode.setClassName(this._getEditorClassName());
-		// Set role 'code' for better screen reader support https://github.com/microsoft/vscode/issues/93438
+		// Set role 'code' for better screen reader support https://github.com/opencec/CEC-IDE/issues/93438
 		this.domNode.setAttribute('role', 'code');
 
 		this._overflowGuardContainer = createFastDomNode(document.createElement('div'));

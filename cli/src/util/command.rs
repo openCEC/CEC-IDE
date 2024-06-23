@@ -87,7 +87,7 @@ pub async fn kill_tree(process_id: u32) -> Result<(), CodeError> {
 		capture_command("kill", &[&process_id_str]).await.ok();
 	}
 
-	// Rusty version of https://github.com/microsoft/vscode-js-debug/blob/main/src/targets/node/terminateProcess.sh
+	// Rusty version of https://github.com/opencec/CEC-IDE-js-debug/blob/main/src/targets/node/terminateProcess.sh
 
 	let parent_id = process_id.to_string();
 	let mut prgrep_cmd = Command::new("pgrep")

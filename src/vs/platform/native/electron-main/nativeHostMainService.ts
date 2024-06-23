@@ -662,7 +662,7 @@ export class NativeHostMainService extends Disposable implements INativeHostMain
 			// the reload and rather go back to an empty window. Transient
 			// workspaces should never restore, even when the user wants
 			// to reload.
-			// For: https://github.com/microsoft/vscode/issues/119695
+			// For: https://github.com/opencec/CEC-IDE/issues/119695
 			if (isWorkspaceIdentifier(window.openedWorkspace)) {
 				const configPath = window.openedWorkspace.configPath;
 				if (configPath.scheme === Schemas.file) {

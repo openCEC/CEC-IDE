@@ -26,7 +26,7 @@ const CSI_SEQUENCE = /(:?\x1b\[|\x9B)[=?>!]?[\d;:]*["$#'* ]?[a-zA-Z@^`{}|~]/g;
 
 /**
  * Froms vs/base/common/strings.ts in core
- * @see https://github.com/microsoft/vscode/blob/22a2a0e833175c32a2005b977d7fbd355582e416/src/vs/base/common/strings.ts#L736
+ * @see https://github.com/opencec/CEC-IDE/blob/22a2a0e833175c32a2005b977d7fbd355582e416/src/vs/base/common/strings.ts#L736
  */
 function removeAnsiEscapeCodes(str: string): string {
 	if (str) {

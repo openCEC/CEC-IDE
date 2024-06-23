@@ -65,7 +65,7 @@ export class ExtensionsWatcher extends Disposable {
 				await Promise.all(added.map(profile => {
 					this.extensionsProfileWatchDisposables.set(profile.id, combinedDisposable(
 						this.fileService.watch(this.uriIdentityService.extUri.dirname(profile.extensionsResource)),
-						// Also listen to the resource incase the resource is a symlink - https://github.com/microsoft/vscode/issues/118134
+						// Also listen to the resource incase the resource is a symlink - https://github.com/opencec/CEC-IDE/issues/118134
 						this.fileService.watch(profile.extensionsResource)
 					));
 					return this.populateExtensionsFromProfile(profile.extensionsResource);

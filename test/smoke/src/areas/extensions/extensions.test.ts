@@ -19,7 +19,7 @@ export function setup(logger: Logger) {
 			await app.workbench.extensions.installExtension('ms-vscode.vscode-smoketest-check', true);
 
 			// Close extension editor because keybindings dispatch is not working when web views are opened and focused
-			// https://github.com/microsoft/vscode/issues/110276
+			// https://github.com/opencec/CEC-IDE/issues/110276
 			await app.workbench.extensions.closeExtension('vscode-smoketest-check');
 
 			await app.workbench.quickaccess.runCommand('Smoke Test Check');

@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/30066/
+	// https://github.com/opencec/CEC-IDE/issues/30066/
 
 	/**
 	 * Provider invoked when the user copies and pastes code.

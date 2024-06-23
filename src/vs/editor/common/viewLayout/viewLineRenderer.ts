@@ -550,7 +550,7 @@ const enum Constants {
 }
 
 /**
- * See https://github.com/microsoft/vscode/issues/6885.
+ * See https://github.com/opencec/CEC-IDE/issues/6885.
  * It appears that having very large spans causes very slow reading of character positions.
  * So here we try to avoid that.
  */

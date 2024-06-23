@@ -148,7 +148,7 @@ function pipeLoggingToParent() {
 	 * Wraps a console message so that it is transmitted to the renderer.
 	 *
 	 * The wrapped property is not defined with `writable: false` to avoid
-	 * throwing errors, but rather a no-op setting. See https://github.com/microsoft/vscode-extension-telemetry/issues/88
+	 * throwing errors, but rather a no-op setting. See https://github.com/opencec/CEC-IDE-extension-telemetry/issues/88
 	 *
 	 * @param {'log' | 'info' | 'warn' | 'error'} method
 	 * @param {'log' | 'warn' | 'error'} severity

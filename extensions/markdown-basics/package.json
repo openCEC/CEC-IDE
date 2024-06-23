@@ -99,10 +99,10 @@
     }
   },
   "scripts": {
-    "update-grammar": "node ../node_modules/vscode-grammar-updater/bin microsoft/vscode-markdown-tm-grammar syntaxes/markdown.tmLanguage ./syntaxes/markdown.tmLanguage.json"
+    "update-grammar": "node ../node_modules/vscode-grammar-updater/bin opencec/CEC-IDE-markdown-tm-grammar syntaxes/markdown.tmLanguage ./syntaxes/markdown.tmLanguage.json"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/vscode.git"
+    "url": "https://github.com/opencec/CEC-IDE.git"
   }
 }

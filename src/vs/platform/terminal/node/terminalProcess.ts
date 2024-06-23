@@ -29,7 +29,7 @@ const enum ShutdownConstants {
 	 * flush to hang the pty host][2] because [conhost should be hosted on another thread][3].
 	 *
 	 * [1]: https://github.com/Tyriar/node-pty/issues/72
-	 * [2]: https://github.com/microsoft/vscode/issues/71966
+	 * [2]: https://github.com/opencec/CEC-IDE/issues/71966
 	 * [3]: https://github.com/microsoft/node-pty/pull/415
 	 */
 	DataFlushTimeout = 250,
@@ -43,9 +43,9 @@ const enum Constants {
 	/**
 	 * The minimum duration between kill and spawn calls on Windows/conpty as a mitigation for a
 	 * hang issue. See:
-	 * - https://github.com/microsoft/vscode/issues/71966
-	 * - https://github.com/microsoft/vscode/issues/117956
-	 * - https://github.com/microsoft/vscode/issues/121336
+	 * - https://github.com/opencec/CEC-IDE/issues/71966
+	 * - https://github.com/opencec/CEC-IDE/issues/117956
+	 * - https://github.com/opencec/CEC-IDE/issues/121336
 	 */
 	KillSpawnThrottleInterval = 250,
 	/**
@@ -59,7 +59,7 @@ const enum Constants {
 	 * Writing large amounts of data can be corrupted for some reason, after looking into this is
 	 * appears to be a race condition around writing to the FD which may be based on how powerful
 	 * the hardware is. The workaround for this is to space out when large amounts of data is being
-	 * written to the terminal. See https://github.com/microsoft/vscode/issues/38137
+	 * written to the terminal. See https://github.com/opencec/CEC-IDE/issues/38137
 	 */
 	WriteMaxChunkSize = 50,
 	/**
@@ -423,7 +423,7 @@ export class TerminalProcess extends Disposable implements ITerminalChildProcess
 			this._logService.trace('TerminalProcess#shutdown', new Error().stack?.replace(/^Error/, ''));
 		}
 		// don't force immediate disposal of the terminal processes on Windows as an additional
-		// mitigation for https://github.com/microsoft/vscode/issues/71966 which causes the pty host
+		// mitigation for https://github.com/opencec/CEC-IDE/issues/71966 which causes the pty host
 		// to become unresponsive, disconnecting all terminals across all windows.
 		if (immediate && !isWindows) {
 			this._kill();
@@ -593,7 +593,7 @@ export class TerminalProcess extends Disposable implements ITerminalChildProcess
 		if (isMacintosh) {
 			// From Big Sur (darwin v20) there is a spawn blocking thread issue on Electron,
 			// this is fixed in VS Code's internal Electron.
-			// https://github.com/Microsoft/vscode/issues/105446
+			// https://github.com/opencec/CEC-IDE/issues/105446
 			return new Promise<string>(resolve => {
 				if (!this._ptyProcess) {
 					resolve(this._initialCwd);

@@ -393,7 +393,7 @@ class InlinedCodeAction extends vscode.CodeAction {
 		}
 
 		if (response.body.renameLocation) {
-			// Disable renames in interactive playground https://github.com/microsoft/vscode/issues/75137
+			// Disable renames in interactive playground https://github.com/opencec/CEC-IDE/issues/75137
 			if (this.document.uri.scheme !== fileSchemes.walkThroughSnippet) {
 				this.command = {
 					command: CompositeCommand.ID,

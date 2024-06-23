@@ -22,7 +22,7 @@ import { applyZoom, zoomIn, zoomOut } from 'vs/platform/window/electron-sandbox/
 import { CancellationError } from 'vs/base/common/errors';
 
 // GitHub has let us know that we could up our limit here to 8k. We chose 7500 to play it safe.
-// ref https://github.com/microsoft/vscode/issues/159191
+// ref https://github.com/opencec/CEC-IDE/issues/159191
 const MAX_URL_LENGTH = 7500;
 
 interface SearchResult {
@@ -665,7 +665,7 @@ export class IssueReporter extends Disposable {
 
 		sourceSelect.innerText = '';
 		sourceSelect.append(this.makeOption('', localize('selectSource', "Select source"), true));
-		sourceSelect.append(this.makeOption('vscode', localize('vscode', "Visual Studio Code"), false));
+		sourceSelect.append(this.makeOption('vscode', localize('vscode', "CEC-IDE"), false));
 		sourceSelect.append(this.makeOption('extension', localize('extension', "An extension"), false));
 		if (this.configuration.product.reportMarketplaceIssueUrl) {
 			sourceSelect.append(this.makeOption('marketplace', localize('marketplace', "Extensions marketplace"), false));

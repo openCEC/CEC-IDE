@@ -23,7 +23,7 @@ variables:
   - name: SCAN_LINUX
     value: ${{ eq(parameters.SCAN_LINUX, true) }}
   - name: VSCODE_MIXIN_REPO
-    value: microsoft/vscode-distro
+    value: opencec/CEC-IDE-distro
   - name: skipComponentGovernanceDetection
     value: true
   - name: NPM_ARCH

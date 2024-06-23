@@ -210,7 +210,7 @@ export function validateTelemetryData(data?: any): { properties: Properties; mea
 				console.warn(`Telemetry property: ${prop} has been trimmed to 8192, the original length is ${value.length}`);
 			}
 			//enforce property value to be less than 8192 char, take the first 8192 char
-			// https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics#limits
+			// https://docs.cec.com.cn/en-us/azure/azure-monitor/app/api-custom-events-metrics#limits
 			properties[prop] = value.substring(0, 8191);
 
 		} else if (typeof value !== 'undefined' && value !== null) {

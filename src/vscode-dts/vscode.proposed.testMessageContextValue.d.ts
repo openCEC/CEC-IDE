@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/190277
+	// https://github.com/opencec/CEC-IDE/issues/190277
 
 	export class TestMessage2 extends TestMessage {
 

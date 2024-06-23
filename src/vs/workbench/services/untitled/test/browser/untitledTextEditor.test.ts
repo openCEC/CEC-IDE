@@ -453,7 +453,7 @@ suite('Untitled text editors', () => {
 		model1.dispose();
 
 		// When a model doesn't exist, it should return undefined
-		assert.strictEqual(service.getValue(URI.parse('https://www.microsoft.com')), undefined);
+		assert.strictEqual(service.getValue(URI.parse('https://www.cec.com.cn')), undefined);
 	});
 
 	test('model#onDidChangeContent', async function () {

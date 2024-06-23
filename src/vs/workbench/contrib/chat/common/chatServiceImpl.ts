@@ -537,7 +537,7 @@ export class ChatService extends Disposable implements IChatService {
 				model.setResponse(request, rawResponse);
 				this.trace('sendRequest', `Provider returned response for session ${model.sessionId}`);
 
-				// TODO refactor this or rethink the API https://github.com/microsoft/vscode-copilot/issues/593
+				// TODO refactor this or rethink the API https://github.com/opencec/CEC-IDE-copilot/issues/593
 				if (provider.provideFollowups) {
 					Promise.resolve(provider.provideFollowups(model.session!, CancellationToken.None)).then(followups => {
 						model.setFollowups(request, followups ?? undefined);

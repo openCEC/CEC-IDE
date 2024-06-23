@@ -161,7 +161,7 @@ export abstract class AbstractTextEditor<T extends IEditorViewState> extends Abs
 			lineNumbersMinChars: 3,
 			fixedOverflowWidgets: true,
 			...this.getReadonlyConfiguration(this.input?.isReadonly()),
-			renderValidationDecorations: 'on' // render problems even in readonly editors (https://github.com/microsoft/vscode/issues/89057)
+			renderValidationDecorations: 'on' // render problems even in readonly editors (https://github.com/opencec/CEC-IDE/issues/89057)
 		};
 	}
 

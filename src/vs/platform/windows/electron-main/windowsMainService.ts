@@ -666,7 +666,7 @@ export class WindowsMainService extends Disposable implements IWindowsMainServic
 
 		let windowToUse: ICodeWindow | undefined;
 		if (!forceNewWindow && typeof openConfig.contextWindowId === 'number') {
-			windowToUse = this.getWindowById(openConfig.contextWindowId); // fix for https://github.com/microsoft/vscode/issues/97172
+			windowToUse = this.getWindowById(openConfig.contextWindowId); // fix for https://github.com/opencec/CEC-IDE/issues/97172
 		}
 
 		return this.openInBrowserWindow({
@@ -688,7 +688,7 @@ export class WindowsMainService extends Disposable implements IWindowsMainServic
 		this.logService.trace('windowsManager#doOpenFolderOrWorkspace', { folderOrWorkspace, filesToOpen });
 
 		if (!forceNewWindow && !windowToUse && typeof openConfig.contextWindowId === 'number') {
-			windowToUse = this.getWindowById(openConfig.contextWindowId); // fix for https://github.com/microsoft/vscode/issues/49587
+			windowToUse = this.getWindowById(openConfig.contextWindowId); // fix for https://github.com/opencec/CEC-IDE/issues/49587
 		}
 
 		return this.openInBrowserWindow({
@@ -816,7 +816,7 @@ export class WindowsMainService extends Disposable implements IWindowsMainServic
 			forceOpenWorkspaceAsFile:
 				// special case diff / merge mode to force open
 				// workspace as file
-				// https://github.com/microsoft/vscode/issues/149731
+				// https://github.com/opencec/CEC-IDE/issues/149731
 				cli.diff && cli._.length === 2 ||
 				cli.merge && cli._.length === 4
 		};
@@ -911,7 +911,7 @@ export class WindowsMainService extends Disposable implements IWindowsMainServic
 
 					// Workspaces
 					if (lastSessionWindow.workspace) {
-						const pathToOpen = await this.resolveOpenable({ workspaceUri: lastSessionWindow.workspace.configPath }, { remoteAuthority: lastSessionWindow.remoteAuthority, rejectTransientWorkspaces: true /* https://github.com/microsoft/vscode/issues/119695 */ });
+						const pathToOpen = await this.resolveOpenable({ workspaceUri: lastSessionWindow.workspace.configPath }, { remoteAuthority: lastSessionWindow.remoteAuthority, rejectTransientWorkspaces: true /* https://github.com/opencec/CEC-IDE/issues/119695 */ });
 						if (isWorkspacePathToOpen(pathToOpen)) {
 							return pathToOpen;
 						}
@@ -1141,7 +1141,7 @@ export class WindowsMainService extends Disposable implements IWindowsMainServic
 		if (response === 2) {
 			shell.openExternal('https://aka.ms/vscode-windows-unc');
 
-			return this.onUNCHostNotAllowed(path, options); // keep showing the dialog until decision (https://github.com/microsoft/vscode/issues/181956)
+			return this.onUNCHostNotAllowed(path, options); // keep showing the dialog until decision (https://github.com/opencec/CEC-IDE/issues/181956)
 		}
 
 		return undefined;

@@ -257,14 +257,14 @@ fn detect_installed_program(log: &log::Logger) -> io::Result<Vec<PathBuf>> {
 	// profiler can output nicely structure plist xml, pulling in an xml parser
 	// just for this is overkill. The default output looks something like...
 	//
-	//     Visual Studio Code - Exploration 2:
+	//     CEC-IDE - Exploration 2:
 	//
 	//        Version: 1.73.0-exploration
 	//        Obtained from: Identified Developer
 	//        Last Modified: 9/23/22, 10:16 AM
 	//        Kind: Intel
 	//        Signed by: Developer ID Application: Microsoft Corporation (UBF8T346G9), Developer ID Certification Authority, Apple Root CA
-	//        Location: /Users/connor/Downloads/Visual Studio Code - Exploration 2.app
+	//        Location: /Users/connor/Downloads/CEC-IDE - Exploration 2.app
 	//
 	// So, use a simple state machine that looks for the first line, and then for
 	// the `Location:` line for the path.
@@ -366,7 +366,7 @@ fn detect_installed_program(_log: &log::Logger) -> io::Result<Vec<PathBuf>> {
 }
 
 // Looks for the given binary name in the PATH, returning all candidate matches.
-// Based on https://github.dev/microsoft/vscode-js-debug/blob/7594d05518df6700df51771895fcad0ddc7f92f9/src/common/pathUtils.ts#L15
+// Based on https://github.dev/opencec/CEC-IDE-js-debug/blob/7594d05518df6700df51771895fcad0ddc7f92f9/src/common/pathUtils.ts#L15
 #[cfg(target_os = "linux")]
 fn detect_installed_program(log: &log::Logger) -> io::Result<Vec<PathBuf>> {
 	use crate::constants::APPLICATION_NAME;

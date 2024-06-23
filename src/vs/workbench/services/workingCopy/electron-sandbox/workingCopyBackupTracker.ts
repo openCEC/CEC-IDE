@@ -54,7 +54,7 @@ export class NativeWorkingCopyBackupTracker extends WorkingCopyBackupTracker imp
 		// this because there is a risk of a backup being scheduled after we have
 		// acknowledged to shutdown and then might end up with partial backups
 		// written to disk, or even empty backups or deletes after writes.
-		// (https://github.com/microsoft/vscode/issues/138055)
+		// (https://github.com/opencec/CEC-IDE/issues/138055)
 
 		this.cancelBackupOperations();
 
@@ -137,7 +137,7 @@ export class NativeWorkingCopyBackupTracker extends WorkingCopyBackupTracker imp
 			if (this.environmentService.isExtensionDevelopment) {
 				this.logService.error(`[backup tracker] error creating backups: ${backupError}`);
 
-				return false; // do not block shutdown during extension development (https://github.com/microsoft/vscode/issues/115028)
+				return false; // do not block shutdown during extension development (https://github.com/opencec/CEC-IDE/issues/115028)
 			}
 
 			this.showErrorDialog(localize('backupTrackerBackupFailed', "The following editors with unsaved changes could not be saved to the back up location."), remainingModifiedWorkingCopies, backupError);
@@ -154,7 +154,7 @@ export class NativeWorkingCopyBackupTracker extends WorkingCopyBackupTracker imp
 			if (this.environmentService.isExtensionDevelopment) {
 				this.logService.error(`[backup tracker] error saving or reverting modified working copies: ${error}`);
 
-				return false; // do not block shutdown during extension development (https://github.com/microsoft/vscode/issues/115028)
+				return false; // do not block shutdown during extension development (https://github.com/opencec/CEC-IDE/issues/115028)
 			}
 
 			this.showErrorDialog(localize('backupTrackerConfirmFailed', "The following editors with unsaved changes could not be saved or reverted."), remainingModifiedWorkingCopies, error);
@@ -353,9 +353,9 @@ export class NativeWorkingCopyBackupTracker extends WorkingCopyBackupTracker imp
 		// Empty window: discard even unrestored backups to
 		// prevent empty windows from restoring that cannot
 		// be closed (workaround for not having implemented
-		// https://github.com/microsoft/vscode/issues/127163
+		// https://github.com/opencec/CEC-IDE/issues/127163
 		// and a fix for what users have reported in issue
-		// https://github.com/microsoft/vscode/issues/126725)
+		// https://github.com/opencec/CEC-IDE/issues/126725)
 		//
 		// Workspace/Folder window: do not discard unrestored
 		// backups to give a chance to restore them in the
@@ -396,7 +396,7 @@ export class NativeWorkingCopyBackupTracker extends WorkingCopyBackupTracker imp
 			// When we shutdown either with no modified working copies left
 			// or with some handled, we start to discard these backups
 			// to free them up. This helps to get rid of stale backups
-			// as reported in https://github.com/microsoft/vscode/issues/92962
+			// as reported in https://github.com/opencec/CEC-IDE/issues/92962
 			//
 			// However, we never want to discard backups that we know
 			// were not restored in the session.
@@ -417,8 +417,8 @@ export class NativeWorkingCopyBackupTracker extends WorkingCopyBackupTracker imp
 		const cts = new CancellationTokenSource();
 
 		return this.progressService.withProgress({
-			location: ProgressLocation.Dialog, 	// use a dialog to prevent the user from making any more changes now (https://github.com/microsoft/vscode/issues/122774)
-			cancellable: true, 					// allow to cancel (https://github.com/microsoft/vscode/issues/112278)
+			location: ProgressLocation.Dialog, 	// use a dialog to prevent the user from making any more changes now (https://github.com/opencec/CEC-IDE/issues/122774)
+			cancellable: true, 					// allow to cancel (https://github.com/opencec/CEC-IDE/issues/112278)
 			delay: 800, 						// delay so that it only appears when operation takes a long time
 			title,
 			detail

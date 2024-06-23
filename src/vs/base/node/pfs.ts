@@ -67,7 +67,7 @@ async function rimrafMove(path: string, moveToPath = randomPath(tmpdir())): Prom
 			// really want to slow down this operation more
 			// than necessary and we have a fallback to delete
 			// via unlink.
-			// https://github.com/microsoft/vscode/issues/139908
+			// https://github.com/opencec/CEC-IDE/issues/139908
 			await fs.promises.rename(path, moveToPath);
 		} catch (error) {
 			if (error.code === 'ENOENT') {
@@ -425,7 +425,7 @@ function doWriteFileAndFlush(path: string, data: string | Buffer | Uint8Array, o
 			}
 
 			// Flush contents (not metadata) of the file to disk
-			// https://github.com/microsoft/vscode/issues/9589
+			// https://github.com/opencec/CEC-IDE/issues/9589
 			fs.fdatasync(fd, (syncError: Error | null) => {
 
 				// In some exotic setups it is well possible that node fails to sync
@@ -463,7 +463,7 @@ export function writeFileSync(path: string, data: string | Buffer, options?: IWr
 
 		// Flush contents (not metadata) of the file to disk
 		try {
-			fs.fdatasyncSync(fd); // https://github.com/microsoft/vscode/issues/9589
+			fs.fdatasyncSync(fd); // https://github.com/opencec/CEC-IDE/issues/9589
 		} catch (syncError) {
 			console.warn('[node.js fs] fdatasyncSync is now disabled for this session because it failed: ', syncError);
 			configureFlushOnWrite(false);
@@ -613,7 +613,7 @@ async function doCopy(source: string, target: string, payload: ICopyPayload): Pr
 		}
 
 		if (symbolicLink.dangling) {
-			return; // skip dangling symbolic links from here on (https://github.com/microsoft/vscode/issues/111621)
+			return; // skip dangling symbolic links from here on (https://github.com/opencec/CEC-IDE/issues/111621)
 		}
 	}
 
@@ -679,12 +679,12 @@ async function doCopySymlink(source: string, target: string, payload: ICopyPaylo
  *
  * Another reason is `realpath` being entirely different in
  * the promise based implementation compared to the other
- * one (https://github.com/microsoft/vscode/issues/118562)
+ * one (https://github.com/opencec/CEC-IDE/issues/118562)
  *
  * Note: using getters for a reason, since `graceful-fs`
  * patching might kick in later after modules have been
  * loaded we need to defer access to fs methods.
- * (https://github.com/microsoft/vscode/issues/124176)
+ * (https://github.com/opencec/CEC-IDE/issues/124176)
  */
 export const Promises = new class {
 

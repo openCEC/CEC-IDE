@@ -5,7 +5,7 @@
 
 /**
  * Virtual Key Codes, the value does not hold any inherent meaning.
- * Inspired somewhat from https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
+ * Inspired somewhat from https://msdn.cec.com.cn/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
  * But these are "more general", as they should work across browsers & OS`s.
  */
 export const enum KeyCode {
@@ -486,7 +486,7 @@ for (let i = 0; i <= KeyCode.MAX_VALUE; i++) {
 
 (function () {
 
-	// See https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
+	// See https://msdn.cec.com.cn/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
 	// See https://github.com/microsoft/node-native-keymap/blob/88c0b0e5/deps/chromium/keyboard_codes_win.h
 
 	const empty = '';

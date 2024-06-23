@@ -10,7 +10,7 @@ import { rtrim } from 'vs/base/common/strings';
 import { Promises, readdirSync } from 'vs/base/node/pfs';
 
 /**
- * Copied from: https://github.com/microsoft/vscode-node-debug/blob/master/src/node/pathUtilities.ts#L83
+ * Copied from: https://github.com/opencec/CEC-IDE-node-debug/blob/master/src/node/pathUtilities.ts#L83
  *
  * Given an absolute, normalized, and existing file path 'realcase' returns the exact path that the file has on disk.
  * On a case insensitive file system, the returned path might differ from the original path by character casing.
@@ -22,7 +22,7 @@ export function realcaseSync(path: string): string | null {
 	if (isLinux) {
 		// This method is unsupported on OS that have case sensitive
 		// file system where the same path can exist in different forms
-		// (see also https://github.com/microsoft/vscode/issues/139709)
+		// (see also https://github.com/opencec/CEC-IDE/issues/139709)
 		return path;
 	}
 
@@ -62,7 +62,7 @@ export async function realcase(path: string): Promise<string | null> {
 	if (isLinux) {
 		// This method is unsupported on OS that have case sensitive
 		// file system where the same path can exist in different forms
-		// (see also https://github.com/microsoft/vscode/issues/139709)
+		// (see also https://github.com/opencec/CEC-IDE/issues/139709)
 		return path;
 	}
 
@@ -103,7 +103,7 @@ export async function realpath(path: string): Promise<string> {
 		// DO NOT USE `fs.promises.realpath` here as it internally
 		// calls `fs.native.realpath` which will result in subst
 		// drives to be resolved to their target on Windows
-		// https://github.com/microsoft/vscode/issues/118562
+		// https://github.com/opencec/CEC-IDE/issues/118562
 		return await Promises.realpath(path);
 	} catch (error) {
 

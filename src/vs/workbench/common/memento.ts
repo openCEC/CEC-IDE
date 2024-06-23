@@ -103,7 +103,7 @@ class ScopedMemento {
 				// Seeing reports from users unable to open editors
 				// from memento parsing exceptions. Log the contents
 				// to diagnose further
-				// https://github.com/microsoft/vscode/issues/102251
+				// https://github.com/opencec/CEC-IDE/issues/102251
 				onUnexpectedError(`[memento]: failed to parse contents: ${error} (id: ${this.id}, scope: ${this.scope}, contents: ${memento})`);
 			}
 		}

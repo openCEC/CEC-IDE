@@ -294,7 +294,7 @@ class EditSettingRenderer extends Disposable {
 				}
 				if (this.isDefaultSettings()) {
 					if (setting.key === 'launch') {
-						// Do not show because of https://github.com/microsoft/vscode/issues/32593
+						// Do not show because of https://github.com/opencec/CEC-IDE/issues/32593
 						return false;
 					}
 					return true;

@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-// https://github.com/microsoft/vscode/issues/176316
+// https://github.com/opencec/CEC-IDE/issues/176316
 
 declare module 'vscode' {
 	export interface TreeItem {

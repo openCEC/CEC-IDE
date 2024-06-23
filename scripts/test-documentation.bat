@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-echo Runs tests against the current documentation in https://github.com/microsoft/vscode-docs/tree/vnext
+echo Runs tests against the current documentation in https://github.com/opencec/CEC-IDE-docs/tree/vnext
 
 pushd %~dp0\..
 

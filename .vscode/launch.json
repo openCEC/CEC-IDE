@@ -240,7 +240,7 @@
 				"--inspect-brk=5875",
 				"--no-cached-data",
 				"--crash-reporter-directory=${workspaceFolder}/.profile-oss/crashes",
-				// for general runtime freezes: https://github.com/microsoft/vscode/issues/127861#issuecomment-904144910
+				// for general runtime freezes: https://github.com/opencec/CEC-IDE/issues/127861#issuecomment-904144910
 				"--disable-features=CalculateNativeWinOcclusion",
 				"--disable-extension=vscode.vscode-api-tests"
 			],
@@ -436,9 +436,9 @@
 			"request": "launch",
 			"name": "Run Unit Tests",
 			"program": "${workspaceFolder}/test/unit/electron/index.js",
-			"runtimeExecutable": "${workspaceFolder}/.build/electron/Code - OSS.app/Contents/MacOS/Electron",
+			"runtimeExecutable": "${workspaceFolder}/.build/electron/CEC-IDE.app/Contents/MacOS/Electron",
 			"windows": {
-				"runtimeExecutable": "${workspaceFolder}/.build/electron/Code - OSS.exe"
+				"runtimeExecutable": "${workspaceFolder}/.build/electron/CEC-IDE.exe"
 			},
 			"linux": {
 				"runtimeExecutable": "${workspaceFolder}/.build/electron/code-oss"
@@ -466,9 +466,9 @@
 			"request": "launch",
 			"name": "Run Unit Tests For Current File",
 			"program": "${workspaceFolder}/test/unit/electron/index.js",
-			"runtimeExecutable": "${workspaceFolder}/.build/electron/Code - OSS.app/Contents/MacOS/Electron",
+			"runtimeExecutable": "${workspaceFolder}/.build/electron/CEC-IDE.app/Contents/MacOS/Electron",
 			"windows": {
-				"runtimeExecutable": "${workspaceFolder}/.build/electron/Code - OSS.exe"
+				"runtimeExecutable": "${workspaceFolder}/.build/electron/CEC-IDE.exe"
 			},
 			"linux": {
 				"runtimeExecutable": "${workspaceFolder}/.build/electron/code-oss"
@@ -502,7 +502,7 @@
 			"timeout": 240000,
 			"args": [
 				"-l",
-				"${workspaceFolder}/.build/electron/Code - OSS.app/Contents/MacOS/Electron"
+				"${workspaceFolder}/.build/electron/CEC-IDE.app/Contents/MacOS/Electron"
 			],
 			"outFiles": [
 				"${cwd}/out/**/*.js"

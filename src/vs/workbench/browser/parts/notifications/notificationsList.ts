@@ -267,6 +267,6 @@ class NotificationAccessibilityProvider implements IListAccessibilityProvider<IN
 		return this._options.widgetAriaLabel ?? localize('notificationsList', "Notifications List");
 	}
 	getRole(): AriaRole {
-		return 'dialog'; // https://github.com/microsoft/vscode/issues/82728
+		return 'dialog'; // https://github.com/opencec/CEC-IDE/issues/82728
 	}
 }

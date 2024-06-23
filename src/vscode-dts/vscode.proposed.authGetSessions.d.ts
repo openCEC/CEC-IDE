@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/152399
+	// https://github.com/opencec/CEC-IDE/issues/152399
 
 	export interface AuthenticationForceNewSessionOptions {
 		/**

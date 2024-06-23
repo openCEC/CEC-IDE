@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/79034
+	// https://github.com/opencec/CEC-IDE/issues/79034
 
 	// This proposal doesn't have any API changes, only contributions
 

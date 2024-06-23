@@ -70,9 +70,9 @@ core-foundation = "0.9.3"
 zbus = { version = "3.13.1", default-features = false, features = ["tokio"] }
 
 [patch.crates-io]
-russh = { git = "https://github.com/microsoft/vscode-russh", branch = "main" }
-russh-cryptovec = { git = "https://github.com/microsoft/vscode-russh", branch = "main" }
-russh-keys = { git = "https://github.com/microsoft/vscode-russh", branch = "main" }
+russh = { git = "https://github.com/opencec/CEC-IDE-russh", branch = "main" }
+russh-cryptovec = { git = "https://github.com/opencec/CEC-IDE-russh", branch = "main" }
+russh-keys = { git = "https://github.com/opencec/CEC-IDE-russh", branch = "main" }
 
 [profile.release]
 strip = true

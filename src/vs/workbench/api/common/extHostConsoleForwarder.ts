@@ -37,7 +37,7 @@ export abstract class AbstractExtHostConsoleForwarder {
 	 * are the only methods that allow later introspection of logged variables.
 	 *
 	 * The wrapped property is not defined with `writable: false` to avoid
-	 * throwing errors, but rather a no-op setting. See https://github.com/microsoft/vscode-extension-telemetry/issues/88
+	 * throwing errors, but rather a no-op setting. See https://github.com/opencec/CEC-IDE-extension-telemetry/issues/88
 	 */
 	private _wrapConsoleMethod(method: 'log' | 'info' | 'warn' | 'error', severity: 'log' | 'warn' | 'error') {
 		const that = this;

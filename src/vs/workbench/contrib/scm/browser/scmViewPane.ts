@@ -1592,7 +1592,7 @@ class ViewModel {
 	}
 }
 
-class SetListViewModeAction extends ViewAction<SCMViewPane>  {
+class SetListViewModeAction extends ViewAction<SCMViewPane> {
 	constructor(menu: Partial<IAction2Options['menu']> = {}) {
 		super({
 			id: 'workbench.scm.action.setListViewMode',
@@ -1621,7 +1621,7 @@ class SetListViewModeNavigationAction extends SetListViewModeAction {
 	}
 }
 
-class SetTreeViewModeAction extends ViewAction<SCMViewPane>  {
+class SetTreeViewModeAction extends ViewAction<SCMViewPane> {
 	constructor(menu: Partial<IAction2Options['menu']> = {}) {
 		super({
 			id: 'workbench.scm.action.setTreeViewMode',
@@ -1705,7 +1705,7 @@ registerAction2(RepositorySortByDiscoveryTimeAction);
 registerAction2(RepositorySortByNameAction);
 registerAction2(RepositorySortByPathAction);
 
-abstract class SetSortKeyAction extends ViewAction<SCMViewPane>  {
+abstract class SetSortKeyAction extends ViewAction<SCMViewPane> {
 	constructor(private sortKey: ViewModelSortKey, title: string) {
 		super({
 			id: `workbench.scm.action.setSortKey.${sortKey}`,
@@ -1745,7 +1745,7 @@ registerAction2(SetSortByNameAction);
 registerAction2(SetSortByPathAction);
 registerAction2(SetSortByStatusAction);
 
-class CollapseAllRepositoriesAction extends ViewAction<SCMViewPane>  {
+class CollapseAllRepositoriesAction extends ViewAction<SCMViewPane> {
 
 	constructor() {
 		super({
@@ -1767,7 +1767,7 @@ class CollapseAllRepositoriesAction extends ViewAction<SCMViewPane>  {
 	}
 }
 
-class ExpandAllRepositoriesAction extends ViewAction<SCMViewPane>  {
+class ExpandAllRepositoriesAction extends ViewAction<SCMViewPane> {
 
 	constructor() {
 		super({
@@ -1818,7 +1818,7 @@ class SCMInputWidget {
 	private _validationTimer: any;
 
 	// This is due to "Setup height change listener on next tick" above
-	// https://github.com/microsoft/vscode/issues/108067
+	// https://github.com/opencec/CEC-IDE/issues/108067
 	private lastLayoutWasTrash = false;
 	private shouldFocusAfterLayout = false;
 

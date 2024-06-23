@@ -34,7 +34,7 @@ export async function downloadExplorerAppx(outDir: string, quality: string = 'st
 		artifactName: fileName,
 		unsafelyDisableChecksums: true,
 		mirrorOptions: {
-			mirror: 'https://github.com/microsoft/vscode-explorer-command/releases/download/',
+			mirror: 'https://github.com/opencec/CEC-IDE-explorer-command/releases/download/',
 			customDir: '3.0.4',
 			customFilename: fileName
 		}

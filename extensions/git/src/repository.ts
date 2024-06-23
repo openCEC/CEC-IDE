@@ -885,7 +885,7 @@ export class Repository implements Disposable {
 			this.disposables.push(trustDisposable);
 		}
 
-		// https://github.com/microsoft/vscode/issues/39039
+		// https://github.com/opencec/CEC-IDE/issues/39039
 		const onSuccessfulPush = filterEvent(this.onDidRunOperation, e => e.operation.kind === OperationKind.Push && !e.error);
 		onSuccessfulPush(() => {
 			const gitConfig = workspace.getConfiguration('git');

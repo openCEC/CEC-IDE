@@ -130,7 +130,7 @@ const processes: { pid: number; cwd: string; cmd: string }[] = [
 	},
 	{
 		pid: 2526,
-		cwd: '/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample',
+		cwd: '/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample',
 		cmd: '/bin/bash'
 	}, {
 		pid: 2719,
@@ -149,7 +149,7 @@ const processes: { pid: number; cwd: string; cmd: string }[] = [
 	},
 	{
 		pid: 2795,
-		cwd: '/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample',
+		cwd: '/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample',
 		cmd: '/home/alex/.vscode-server-insiders/bin/bc13785d3dd99b4b0e9da9aed17bb79809a50804/node/home/alex/.vscode-server-insiders/bin/bc13785d3dd99b4b0e9da9aed17bb79809a50804/extensions/json-language-features/server/dist/node/jsonServerMain--node-ipc--clientProcessId=2504'
 	},
 	{
@@ -164,18 +164,18 @@ const processes: { pid: number; cwd: string; cmd: string }[] = [
 	},
 	{
 		pid: 3058,
-		cwd: '/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample',
+		cwd: '/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample',
 		cmd: 'npm'
 	},
 	{
 		pid: 3070,
-		cwd: '/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample',
+		cwd: '/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample',
 		cmd: 'sh-ctsc -watch -p ./'
 	},
 	{
 		pid: 3071,
-		cwd: '/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample',
-		cmd: 'node/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample/node_modules/.bin/tsc-watch-p./'
+		cwd: '/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample',
+		cmd: 'node/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample/node_modules/.bin/tsc-watch-p./'
 	},
 	{
 		pid: 312,
@@ -194,12 +194,12 @@ const processes: { pid: number; cwd: string; cmd: string }[] = [
 	},
 	{
 		pid: 3610,
-		cwd: '/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample',
+		cwd: '/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample',
 		cmd: '/bin/bash'
 	},
 	{
 		pid: 4412,
-		cwd: '/home/alex/repos/Microsoft/vscode-extension-samples/helloworld-sample',
+		cwd: '/home/alex/repos/opencec/CEC-IDE-extension-samples/helloworld-sample',
 		cmd: 'http-server'
 	},
 	{

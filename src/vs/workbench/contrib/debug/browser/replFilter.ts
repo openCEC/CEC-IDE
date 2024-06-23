@@ -39,7 +39,7 @@ export class ReplFilter implements ITreeFilter<IReplElement> {
 
 	filter(element: IReplElement, parentVisibility: TreeVisibility): TreeFilterResult<void> {
 		if (element instanceof ReplEvaluationInput || element instanceof ReplEvaluationResult || element instanceof Variable) {
-			// Only filter the output events, everything else is visible https://github.com/microsoft/vscode/issues/105863
+			// Only filter the output events, everything else is visible https://github.com/opencec/CEC-IDE/issues/105863
 			return TreeVisibility.Visible;
 		}
 

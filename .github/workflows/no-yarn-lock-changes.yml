@@ -9,7 +9,7 @@ jobs:
       - uses: octokit/request-action@v2.x
         id: get_permissions
         with:
-          route: GET /repos/microsoft/vscode/collaborators/{username}/permission
+          route: GET /repos/opencec/CEC-IDE/collaborators/{username}/permission
           username: ${{ github.event.pull_request.user.login }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

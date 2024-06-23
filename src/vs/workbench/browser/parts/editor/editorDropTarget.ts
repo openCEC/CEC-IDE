@@ -628,7 +628,7 @@ export class EditorDropTarget extends Themable {
 		) {
 			const dndContributions = Registry.as<IDragAndDropContributionRegistry>(DragAndDropExtensions.DragAndDropContribution).getAll();
 			const dndContributionKeys = Array.from(dndContributions).map(e => e.dataFormatKey);
-			if (!containsDragType(event, DataTransfers.FILES, CodeDataTransfers.FILES, DataTransfers.RESOURCES, CodeDataTransfers.EDITORS, ...dndContributionKeys)) { // see https://github.com/microsoft/vscode/issues/25789
+			if (!containsDragType(event, DataTransfers.FILES, CodeDataTransfers.FILES, DataTransfers.RESOURCES, CodeDataTransfers.EDITORS, ...dndContributionKeys)) { // see https://github.com/opencec/CEC-IDE/issues/25789
 				event.dataTransfer.dropEffect = 'none';
 				return; // unsupported transfer
 			}

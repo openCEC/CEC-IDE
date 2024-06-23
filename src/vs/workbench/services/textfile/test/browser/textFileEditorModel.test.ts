@@ -666,7 +666,7 @@ suite('Files - TextFileEditorModel', () => {
 		if (isWeb) {
 			// web tests does not ensure timeouts are respected at all, so we cannot
 			// really assert the mtime to be different, only that it is equal or greater.
-			// https://github.com/microsoft/vscode/issues/161886
+			// https://github.com/opencec/CEC-IDE/issues/161886
 			assert.ok(assertIsDefined(getLastResolvedFileStat(model1)).mtime >= m1Mtime);
 			assert.ok(assertIsDefined(getLastResolvedFileStat(model2)).mtime >= m2Mtime);
 		} else {

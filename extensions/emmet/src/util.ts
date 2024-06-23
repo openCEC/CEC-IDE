@@ -54,7 +54,7 @@ export function updateEmmetExtensionsPath(forceRefresh: boolean = false) {
 
 /**
  * Migrate old configuration(string) for extensionsPath to new type(string[])
- * https://github.com/microsoft/vscode/issues/117517
+ * https://github.com/opencec/CEC-IDE/issues/117517
  */
 export function migrateEmmetExtensionsPath() {
 	// Get the detail info of emmet.extensionsPath setting

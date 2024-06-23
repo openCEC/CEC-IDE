@@ -18,8 +18,8 @@ export interface IAppInsightsCore {
 	unload(isAsync: boolean, unloadComplete: (unloadState: ITelemetryUnloadState) => void): void;
 }
 
-const endpointUrl = 'https://mobile.events.data.microsoft.com/OneCollector/1.0';
-const endpointHealthUrl = 'https://mobile.events.data.microsoft.com/ping';
+const endpointUrl = 'https://mobile.events.data.cec.com.cn/OneCollector/1.0';
+const endpointHealthUrl = 'https://mobile.events.data.cec.com.cn/ping';
 
 async function getClient(instrumentationKey: string, addInternalFlag?: boolean, xhrOverride?: IXHROverride): Promise<IAppInsightsCore> {
 	const oneDs = await importAMDNodeModule<typeof import('@microsoft/1ds-core-js')>('@microsoft/1ds-core-js', 'dist/ms.core.js');

@@ -1000,7 +1000,7 @@ declare module 'vscode' {
 		/**
 		 * Specifies the size of the gutter icon.
 		 * Available values are 'auto', 'contain', 'cover' and any percentage value.
-		 * For further information: https://msdn.microsoft.com/en-us/library/jj127316(v=vs.85).aspx
+		 * For further information: https://msdn.cec.com.cn/en-us/library/jj127316(v=vs.85).aspx
 		 */
 		gutterIconSize?: string;
 
@@ -2791,7 +2791,7 @@ declare module 'vscode' {
 		 * that appear in the markdown text. This means you can only use markdown syntax for rendering.
 		 *
 		 * When `supportHtml` is true, the markdown render will also allow a safe subset of html tags
-		 * and attributes to be rendered. See https://github.com/microsoft/vscode/blob/6d2920473c6f13759c978dd89104c4270a83422d/src/vs/base/browser/markdownRenderer.ts#L296
+		 * and attributes to be rendered. See https://github.com/opencec/CEC-IDE/blob/6d2920473c6f13759c978dd89104c4270a83422d/src/vs/base/browser/markdownRenderer.ts#L296
 		 * for a list of all supported tags and attributes.
 		 */
 		supportHtml?: boolean;
@@ -10208,7 +10208,7 @@ declare module 'vscode' {
 		 * @param shellPath Optional path to a custom shell executable to be used in the terminal.
 		 * @param shellArgs Optional args for the custom shell executable. A string can be used on Windows only which
 		 * allows specifying shell args in
-		 * [command-line format](https://msdn.microsoft.com/en-au/08dfcab2-eb6e-49a4-80eb-87d4076c98c6).
+		 * [command-line format](https://msdn.cec.com.cn/en-au/08dfcab2-eb6e-49a4-80eb-87d4076c98c6).
 		 * @return A new Terminal.
 		 * @throws When running in an environment where a new process cannot be started.
 		 */
@@ -10986,7 +10986,7 @@ declare module 'vscode' {
 
 		/**
 		 * Args for the custom shell executable. A string can be used on Windows only which allows
-		 * specifying shell args in [command-line format](https://msdn.microsoft.com/en-au/08dfcab2-eb6e-49a4-80eb-87d4076c98c6).
+		 * specifying shell args in [command-line format](https://msdn.cec.com.cn/en-au/08dfcab2-eb6e-49a4-80eb-87d4076c98c6).
 		 */
 		shellArgs?: string[] | string;
 
@@ -16063,7 +16063,7 @@ declare module 'vscode' {
 	 * Namespace for localization-related functionality in the extension API. To use this properly,
 	 * you must have `l10n` defined in your extension manifest and have bundle.l10n.<language>.json files.
 	 * For more information on how to generate bundle.l10n.<language>.json files, check out the
-	 * [vscode-l10n repo](https://github.com/microsoft/vscode-l10n).
+	 * [vscode-l10n repo](https://github.com/opencec/CEC-IDE-l10n).
 	 *
 	 * Note: Built-in extensions (for example, Git, TypeScript Language Features, GitHub Authentication)
 	 * are excluded from the `l10n` property requirement. In other words, they do not need to specify

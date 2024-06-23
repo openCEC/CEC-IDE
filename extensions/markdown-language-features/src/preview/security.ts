@@ -137,7 +137,7 @@ export class PreviewSecuritySelector {
 		}
 
 		if (selection.type === 'moreinfo') {
-			vscode.commands.executeCommand('vscode.open', vscode.Uri.parse('https://go.microsoft.com/fwlink/?linkid=854414'));
+			vscode.commands.executeCommand('vscode.open', vscode.Uri.parse('https://go.cec.com.cn/fwlink/?linkid=854414'));
 			return;
 		}
 

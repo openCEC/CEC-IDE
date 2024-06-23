@@ -73,7 +73,7 @@
 
 /**
  * The following rules are very specific because of inline drop down menus
- * https://github.com/microsoft/vscode/issues/101410
+ * https://github.com/opencec/CEC-IDE/issues/101410
  */
 .scm-view .scm-provider > .actions > .monaco-toolbar > .monaco-action-bar > .actions-container > .action-item {
 	padding-left: 4px;

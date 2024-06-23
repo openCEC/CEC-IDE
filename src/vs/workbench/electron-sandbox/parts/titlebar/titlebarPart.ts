@@ -232,7 +232,7 @@ export class TitlebarPart extends BrowserTitleBarPart {
 			// When the user goes into full screen mode, the height of the title bar becomes 0.
 			// Instead, set it back to the default titlebar height for Catalina users
 			// so that they can have the traffic lights rendered at the proper offset.
-			// Ref https://github.com/microsoft/vscode/issues/159862
+			// Ref https://github.com/opencec/CEC-IDE/issues/159862
 			const newHeight = (height > 0 || this.isBigSurOrNewer()) ?
 				Math.round(height * getZoomFactor()) : this.getMacTitlebarSize();
 			if (newHeight !== this.cachedWindowControlHeight) {

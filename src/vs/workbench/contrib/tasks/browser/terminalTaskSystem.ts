@@ -871,7 +871,7 @@ export class TerminalTaskSystem extends Disposable implements ITaskSystem {
 			this._fireTaskEvent(TaskEvent.create(TaskEventKind.Start, task, terminal.instanceId, resolver.values));
 			let onData: IDisposable | undefined;
 			if (problemMatchers.length) {
-				// prevent https://github.com/microsoft/vscode/issues/174511 from happening
+				// prevent https://github.com/opencec/CEC-IDE/issues/174511 from happening
 				onData = terminal.onLineData((line) => {
 					watchingProblemMatcher.processLine(line);
 					if (!delayer) {
@@ -1151,7 +1151,7 @@ export class TerminalTaskSystem extends Disposable implements ITaskSystem {
 				if (!shellSpecified) {
 					// Under Mac remove -l to not start it as a login shell.
 					if (platform === Platform.Platform.Mac) {
-						// Background on -l on osx https://github.com/microsoft/vscode/issues/107563
+						// Background on -l on osx https://github.com/opencec/CEC-IDE/issues/107563
 						// TODO: Handle by pulling the default terminal profile?
 						// const osxShellArgs = this._configurationService.inspect(TerminalSettingId.ShellArgsMacOs);
 						// if ((osxShellArgs.user === undefined) && (osxShellArgs.userLocal === undefined) && (osxShellArgs.userLocalValue === undefined)

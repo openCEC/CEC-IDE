@@ -575,7 +575,7 @@ export class SplitView<TLayoutContext = undefined> extends Disposable {
 			horizontal: this.orientation === Orientation.HORIZONTAL ? (options.scrollbarVisibility ?? ScrollbarVisibility.Auto) : ScrollbarVisibility.Hidden
 		}, this.scrollable));
 
-		// https://github.com/microsoft/vscode/issues/157737
+		// https://github.com/opencec/CEC-IDE/issues/157737
 		const onDidScrollViewContainer = this._register(new DomEmitter(this.viewContainer, 'scroll')).event;
 		this._register(onDidScrollViewContainer(_ => {
 			const position = this.scrollableElement.getScrollPosition();

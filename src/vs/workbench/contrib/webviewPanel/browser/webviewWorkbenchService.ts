@@ -286,7 +286,7 @@ export class WebviewEditorService extends Disposable implements IWebviewWorkbenc
 			pinned: true,
 			preserveFocus: showOptions.preserveFocus,
 			// preserve pre 1.38 behaviour to not make group active when preserveFocus: true
-			// but make sure to restore the editor to fix https://github.com/microsoft/vscode/issues/79633
+			// but make sure to restore the editor to fix https://github.com/opencec/CEC-IDE/issues/79633
 			activation: showOptions.preserveFocus ? EditorActivation.RESTORE : undefined
 		}, showOptions.group);
 		return webviewInput;
@@ -302,7 +302,7 @@ export class WebviewEditorService extends Disposable implements IWebviewWorkbenc
 		this._editorService.openEditor(topLevelEditor, {
 			preserveFocus,
 			// preserve pre 1.38 behaviour to not make group active when preserveFocus: true
-			// but make sure to restore the editor to fix https://github.com/microsoft/vscode/issues/79633
+			// but make sure to restore the editor to fix https://github.com/opencec/CEC-IDE/issues/79633
 			activation: preserveFocus ? EditorActivation.RESTORE : undefined
 		}, group);
 	}

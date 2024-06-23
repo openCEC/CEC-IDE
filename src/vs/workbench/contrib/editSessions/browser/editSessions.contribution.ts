@@ -491,7 +491,7 @@ export class EditSessionsContribution extends Disposable implements IWorkbenchCo
 		await this.remoteAgentService.getEnvironment();
 
 		// Edit sessions are not currently supported in empty workspaces
-		// https://github.com/microsoft/vscode/issues/159220
+		// https://github.com/opencec/CEC-IDE/issues/159220
 		if (this.contextService.getWorkbenchState() === WorkbenchState.EMPTY) {
 			return;
 		}

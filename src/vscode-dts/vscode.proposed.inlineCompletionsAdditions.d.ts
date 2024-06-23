@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/124024 @hediet @alexdima
+	// https://github.com/opencec/CEC-IDE/issues/124024 @hediet @alexdima
 
 	export namespace languages {
 		/**

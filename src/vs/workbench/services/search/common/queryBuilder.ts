@@ -589,7 +589,7 @@ function splitGlobPattern(pattern: string): string[] {
 }
 
 /**
- * Note - we used {} here previously but ripgrep can't handle nested {} patterns. See https://github.com/microsoft/vscode/issues/32761
+ * Note - we used {} here previously but ripgrep can't handle nested {} patterns. See https://github.com/opencec/CEC-IDE/issues/32761
  */
 function expandGlobalGlob(pattern: string): string[] {
 	const patterns = [

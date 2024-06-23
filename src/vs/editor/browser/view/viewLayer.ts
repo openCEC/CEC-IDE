@@ -515,7 +515,7 @@ class ViewLayerRenderer<T extends IVisibleLine> {
 		}
 		const lastChild = <HTMLElement>this.domNode.lastChild;
 		if (domNodeIsEmpty || !lastChild) {
-			this.domNode.innerHTML = newLinesHTML as string; // explains the ugly casts -> https://github.com/microsoft/vscode/issues/106396#issuecomment-692625393;
+			this.domNode.innerHTML = newLinesHTML as string; // explains the ugly casts -> https://github.com/opencec/CEC-IDE/issues/106396#issuecomment-692625393;
 		} else {
 			lastChild.insertAdjacentHTML('afterend', newLinesHTML as string);
 		}

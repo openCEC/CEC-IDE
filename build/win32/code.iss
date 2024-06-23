@@ -1616,8 +1616,8 @@ end;
   #expr SaveToFile(AddBackslash(SourcePath) + "code-processed.iss")
 #endif
 
-// https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls
-// https://docs.microsoft.com/en-US/windows/security/identity-protection/access-control/security-identifiers
+// https://docs.cec.com.cn/en-us/windows-server/administration/windows-commands/icacls
+// https://docs.cec.com.cn/en-US/windows/security/identity-protection/access-control/security-identifiers
 procedure DisableAppDirInheritance();
 var
   ResultCode: Integer;

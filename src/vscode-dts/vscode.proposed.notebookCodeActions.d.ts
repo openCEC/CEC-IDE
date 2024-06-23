@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/179213
+	// https://github.com/opencec/CEC-IDE/issues/179213
 
 	export class NotebookCodeActionKind {
 		// can only return MULTI CELL workspaceEdits

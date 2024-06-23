@@ -46,7 +46,7 @@ if (!/yarn[\w-.]*\.c?js$|yarnpkg$/.test(process.env['npm_execpath'])) {
 
 if (process.platform === 'win32') {
 	if (!hasSupportedVisualStudioVersion()) {
-		console.error('\033[1;31m*** Invalid C/C++ Compiler Toolchain. Please check https://github.com/microsoft/vscode/wiki/How-to-Contribute#prerequisites.\033[0;0m');
+		console.error('\033[1;31m*** Invalid C/C++ Compiler Toolchain. Please check https://github.com/opencec/CEC-IDE/wiki/How-to-Contribute#prerequisites.\033[0;0m');
 		err = true;
 	}
 	if (!err) {

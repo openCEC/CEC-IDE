@@ -37,7 +37,7 @@ steps:
     displayName: Check version
 
   - bash: |
-      git config --global user.email "vscode@microsoft.com"
+      git config --global user.email "vscode@cec.com.cn"
       git config --global user.name "VSCode"
 
       git clone https://$(GITHUB_TOKEN)@github.com/DefinitelyTyped/DefinitelyTyped.git --depth=1

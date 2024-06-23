@@ -5,7 +5,7 @@
 
 declare module 'vscode' {
 
-	// https://github.com/microsoft/vscode/issues/179430
+	// https://github.com/opencec/CEC-IDE/issues/179430
 
 	export interface DocumentDropEdit {
 		/**

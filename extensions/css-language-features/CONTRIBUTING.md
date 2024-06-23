@@ -1,7 +1,7 @@
 
 ## Setup
 
-- Clone [microsoft/vscode](https://github.com/microsoft/vscode)
+- Clone [opencec/CEC-IDE](https://github.com/opencec/CEC-IDE)
 - Run `yarn` at `/`, this will install
 	- Dependencies for `/extension/css-language-features/`
 	- Dependencies for `/extension/css-language-features/server/`
@@ -9,7 +9,7 @@
 
 - Open `/extensions/css-language-features/` as the workspace in VS Code
 - In `/extensions/css-language-features/` run `yarn compile`(or `yarn watch`) to build the client and server
-- Run the [`Launch Extension`](https://github.com/microsoft/vscode/blob/master/extensions/css-language-features/.vscode/launch.json) debug target in the Debug View. This will:
+- Run the [`Launch Extension`](https://github.com/opencec/CEC-IDE/blob/master/extensions/css-language-features/.vscode/launch.json) debug target in the Debug View. This will:
 	- Launch a new VS Code instance with the `css-language-features` extension loaded
 - Open a `.css` file to activate the extension. The extension will start the CSS language server process.
 - Add `"css.trace.server": "verbose"` to the settings to observe the communication between client and server in the `CSS Language Server` output.
@@ -21,15 +21,15 @@
 
 ## Contribute to vscode-css-languageservice
 
-[microsoft/vscode-css-languageservice](https://github.com/microsoft/vscode-css-languageservice) contains the language smarts for CSS/SCSS/Less.
+[opencec/CEC-IDE-css-languageservice](https://github.com/opencec/CEC-IDE-css-languageservice) contains the language smarts for CSS/SCSS/Less.
 This extension wraps the css language service into a Language Server for VS Code.
-If you want to fix CSS/SCSS/Less issues or make improvements, you should make changes at [microsoft/vscode-css-languageservice](https://github.com/microsoft/vscode-css-languageservice).
+If you want to fix CSS/SCSS/Less issues or make improvements, you should make changes at [opencec/CEC-IDE-css-languageservice](https://github.com/opencec/CEC-IDE-css-languageservice).
 
 However, within this extension, you can run a development version of `vscode-css-languageservice` to debug code or test language features interactively:
 
 #### Linking `vscode-css-languageservice` in `css-language-features/server/`
 
-- Clone [microsoft/vscode-css-languageservice](https://github.com/microsoft/vscode-css-languageservice)
+- Clone [opencec/CEC-IDE-css-languageservice](https://github.com/opencec/CEC-IDE-css-languageservice)
 - Run `yarn` in `vscode-css-languageservice`
 - Run `yarn link` in `vscode-css-languageservice`. This will compile and link `vscode-css-languageservice`
 - In `css-language-features/server/`, run `yarn link vscode-css-languageservice`

@@ -21,26 +21,26 @@ suite('Tests for completion in CSS embedded in HTML', () => {
 		await testCompletionProvider('html', `<div style='color: #0|'`, [{ label: '#000000' }]);
 	});
 
-	// https://github.com/microsoft/vscode/issues/79766
+	// https://github.com/opencec/CEC-IDE/issues/79766
 	test('#79766, correct region determination', async () => {
 		await testCompletionProvider('html', `<div style="color: #000">di|</div>`, [
 			{ label: 'div', documentation: `<div>|</div>` }
 		]);
 	});
 
-	// https://github.com/microsoft/vscode/issues/86941
+	// https://github.com/opencec/CEC-IDE/issues/86941
 	test('#86941, widows should not be completed', async () => {
 		await testCompletionProvider('css', `.foo { wi| }`, undefined);
 	});
 
-	// https://github.com/microsoft/vscode/issues/117020
+	// https://github.com/opencec/CEC-IDE/issues/117020
 	test('#117020, ! at end of abbreviation should have completion', async () => {
 		await testCompletionProvider('css', `.foo { bdbn!| }`, [
 			{ label: 'border-bottom: none !important;', documentation: `border-bottom: none !important;` }
 		]);
 	});
 
-	// https://github.com/microsoft/vscode/issues/138461
+	// https://github.com/opencec/CEC-IDE/issues/138461
 	test('#138461, JSX array noise', async () => {
 		await testCompletionProvider('jsx', 'a[i]', undefined);
 		await testCompletionProvider('jsx', 'Component[a b]', undefined);

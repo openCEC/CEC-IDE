@@ -589,7 +589,7 @@ export class ViewsService extends Disposable implements IViewsService {
 				// Use composite's instantiation service to get the editor progress service for any editors instantiated within the composite
 				const viewPaneContainer = that.createViewPaneContainer(element, viewContainer, viewContainerLocation, viewPaneContainerDisposables, this.instantiationService);
 
-				// Only updateTitleArea for non-filter views: microsoft/vscode-remote-release#3676
+				// Only updateTitleArea for non-filter views: opencec/CEC-IDE-remote-release#3676
 				if (!(viewPaneContainer instanceof FilterViewPaneContainer)) {
 					viewPaneContainerDisposables.add(Event.any(viewPaneContainer.onDidAddViews, viewPaneContainer.onDidRemoveViews, viewPaneContainer.onTitleAreaUpdate)(() => {
 						// Update title area since there is no better way to update secondary actions
